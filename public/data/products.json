@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "A56 5G",
+        "brand": "Samsung",
+        "category": "celular",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "12 MP",
+            "camaraPosterior": "50 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "6.7"
+        },
+        "price": 1083999,
+        "imageUrl": "/images/galaxy-a56.png"
+    },
+    {
+        "id": "2",
+        "name": "A56 5G",
+        "brand": "Samsung",
+        "category": "celular",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "12 MP",
+            "camaraPosterior": "50 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "6.7"
+        },
+        "price": 1083999,
+        "imageUrl": "/images/galaxy-a56.png"
+    },
+    {
+        "id": "3",
+        "name": "A56 5G",
+        "brand": "Samsung",
+        "category": "celular",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "12 MP",
+            "camaraPosterior": "50 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "6.7"
+        },
+        "price": 1083999,
+        "imageUrl": "/images/galaxy-a56.png"
+    }
+]
