@@ -1,9 +1,10 @@
 [
     {
         "id": "1",
-        "name": "A56 5G",
+        "name": "Samsung Galaxy A56 5G 256GB Grafito",
         "brand": "Samsung",
-        "category": "celular",
+        "category": "Celular",
+        "feature": "Galaxy A56 5G admite hasta 6 generaciones de actualizaciones del sistema operativo y hasta 6 años de actualizaciones de seguridad para que siga funcionando como nuevo.",
         "description": {
             "almacenamiento": "256 GB",
             "camaraFrontal": "12 MP",
@@ -17,34 +18,239 @@
     },
     {
         "id": "2",
-        "name": "A56 5G",
+        "name": "Samsung Galaxy S25 256GB Blanco",
         "brand": "Samsung",
-        "category": "celular",
+        "category": "Celular",
+        "feature": "El Samsung Galaxy S25 llega con un diseño sofisticado y un rendimiento de alto nivel. Su pantalla Dynamic AMOLED de 6,2 pulgadas (o 6,7” en el modelo Plus) garantiza colores vibrantes y fluidez en cada interacción. Gracias a su procesador Snapdragon 8 Elite para Galaxy, la experiencia es rápida y eficiente, ideal para juegos, multitareas y contenido multimedia.",
         "description": {
             "almacenamiento": "256 GB",
             "camaraFrontal": "12 MP",
             "camaraPosterior": "50 MP",
-            "SistemaOperativo": "Android 14",
-            "RAM": "8GB",
+            "SistemaOperativo": "Android 15",
+            "RAM": "12GB",
             "pantalla": "6.7"
         },
-        "price": 1083999,
-        "imageUrl": "/images/galaxy-a56.png"
+        "price": 2658999,
+        "imageUrl": "/images/S25.jpg"
     },
     {
         "id": "3",
-        "name": "A56 5G",
+        "name": "Samsung Galaxy S25 Ultra 256GB Titanium Black",
         "brand": "Samsung",
-        "category": "celular",
+        "category": "Celular",
+        "feature": "El Samsung Galaxy Ultra redefine la experiencia móvil con un diseño sofisticado y un rendimiento optimizado por inteligencia artificial. Su potente procesador Snapdragon 8 Elite garantiza fluidez en cada tarea, mientras que la pantalla Dynamic AMOLED 2X de 6.8 pulgadas ofrece una calidad de imagen excepcional con colores vibrantes y un brillo mejorado.",
         "description": {
             "almacenamiento": "256 GB",
             "camaraFrontal": "12 MP",
+            "camaraPosterior": "200 MP",
+            "SistemaOperativo": "Android 15",
+            "RAM": "12GB",
+            "pantalla": "6.9"
+        },
+        "price": 3428999,
+        "imageUrl": "/images/s25-ultra.png"
+    },
+    {
+        "id": "4",
+        "name": "Xiaomi POCO X7 Pro 5G",
+        "brand": "Xiaomi",
+        "category": "Celular",
+        "feature": "El Xiaomi POCO X7 Pro 5G eleva tu experiencia móvil con un equilibrio perfecto entre rendimiento, diseño y conectividad. Equipado con 12 GB de RAM y un impresionante almacenamiento interno de 512 GB, este dispositivo está preparado para todo: juegos exigentes, multitarea fluida y amplio espacio para fotos, videos y aplicaciones. El POCO X7 Pro 5G es la opción ideal para quienes buscan velocidad, potencia y gran capacidad de almacenamiento, todo en un solo equipo.",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "20 MP",
+            "camaraPosterior": "50 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "12GB",
+            "pantalla": "6.67"
+        },
+        "price": 1133599,
+        "imageUrl": "/images/poco-x7-pro.png"
+    },
+    {
+        "id": "5",
+        "name": "ZTE Blade A55 128GB Black",
+        "brand": "ZTE",
+        "category": "Celular",
+        "feature": "Con Android 14, el ZTE Blade A55 es capaz de brindar un rendimiento ágil y funciones mejoradas. Este sistema operativo se centra en ofrecer una experiencia más personalizada, segura y accesible para los usuarios.",
+        "description": {
+            "almacenamiento": "128 GB",
+            "camaraFrontal": "8 MP",
+            "camaraPosterior": "13 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "4GB",
+            "pantalla": "6.75"
+        },
+        "price": 299999,
+        "imageUrl": "/images/zte-blade-a55.png"
+    },
+    {
+        "id": "6",
+        "name": "TCL 50 128/4GB 5G lite Space Gray",
+        "brand": "TCL",
+        "category": "Celular",
+        "feature": "El modo de carga inteligente durante la noche, junto con la aplicación Smart Manager, mantendrá la salud de la batería y prolongará su vida útil. Batería que no te genera estrés,haz lo que tengas que hacer. Ahora, por mucho más tiempo y cárgalo al día siguiente.Carga rápida 18W.",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "8 MP",
+            "camaraPosterior": "32 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "4GB",
+            "pantalla": "6.6"
+        },
+        "price": 1083999,
+        "imageUrl": "/images/TCL-50.png"
+    },
+    {
+        "id": "7",
+        "name": "Galaxy A06 64/4GB Black",
+        "brand": "Samsung",
+        "category": "Celular",
+        "feature": "Galaxy A06 está equipado con un procesador MediaTek G85 y memoria interna para jugar, transmitir videos y navegar en redes sociales. La cámara principal de 50MP captura imágenes increíbles, mientras que la batería de 5,000mAh te permite estar conectado por más tiempo.Disfrutá de la multitarea con el almacenamiento adicional.",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "8 MP",
             "camaraPosterior": "50 MP",
             "SistemaOperativo": "Android 14",
             "RAM": "8GB",
             "pantalla": "6.7"
         },
         "price": 1083999,
-        "imageUrl": "/images/galaxy-a56.png"
+        "imageUrl": "/images/galaxy-A06.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Galaxy A35 5G 256/8GB Awesome Lilac",
+        "brand": "Samsung",
+        "category": "Celular",
+        "feature": "Una combinación de simplicidad y elegancia. El diseño icónico del Galaxy A35 5G presenta un diseño de cámara lineal con una parte posterior de vidrio y un marco lateral plano para una apariencia elegante.",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "13 MP",
+            "camaraPosterior": "50 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "6.7"
+        },
+        "price": 1083999,
+        "imageUrl": "/images/galaxy_A35.png"
+    },
+    {
+        "id": "9",
+        "name": "Smartwatch Huawei Band 10 Black",
+        "brand": "Huawei",
+        "category": "Smartwatch",
+        "feature": "Recibe notificaciones de llamadas incluso cuando la banda esté silenciada, y envia mensajes preestablecidos cuando tengas que rechazar llamadas, con un solo par de toques en tu muñeca.",
+        "description": {
+            "conectividad":"2.4 GHz, BT 5.0, y BLE",
+            "pantalla": "1.47"
+        },
+        "price": 79999,
+        "imageUrl": "/images/Huawei-Band-10.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Smartwatch Huawei Watch D2",
+        "brand": "Huawei",
+        "category": "Smartwatch",
+        "feature": "Mediciones y recordatorios inteligentes, benefíciate de los recordatorios automáticos, que funcionan a la perfección con el monitoreo científico del sueño del reloj, para tomar las lecturas de PA a las horas óptimas y establecer un plan de MAPA que sea el mejor para ti. Controles diarios,mantén a raya los riesgos de PA, comiendo, durmiendo, haciendo ejercicio e incluso respirando mejor. Informes semanales de PA, mantente al día de los cambios de tu PA y de los datos de tus controles de salud, y consulta consejos de alto nivel para controlar tu salud.",
+        "description": {
+            "conectividad":"2.4 GHz, BT 5.0, y BLE",
+            "pantalla": "1.82"
+        },
+        "price": 649999,
+        "imageUrl": "/images/WATCH_D2.jpg"
+    },
+    {
+        "id": "11",
+        "name": "Tablet Samsung Galaxy Tab A9 Wi-Fi 64/4GB Graphite",
+        "brand": "Samsung",
+        "category": "Tablet",
+        "feature": "Mantené tu información sana y salva. Guardá datos importantes en la Carpeta segura y controlá el estado de seguridad general de tu dispositivo desde el Panel de privacidad. Aprovechá al máximo tu experiencia Galaxy, sin preocuparte por problemas de seguridad.",
+        "description": {
+            "almacenamiento": "256 GB",
+            "camaraFrontal": "2 MP",
+            "camaraPosterior": "8 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "8.7"
+        },
+        "price": 429999,
+        "imageUrl": "/images/tablet-tab-A9.jpg"
+    },
+    {
+        "id": "12",
+        "name": "Impresora láser monocromática Pantum BP2300W Wifi Blanca",
+        "brand": "Pantum ",
+        "category": "Impresora",
+        "feature": "Alta velocidad: Con una forma compacta, se puede colocar en cualquier lugar libremente. Velocidad de impresión A4 de hasta 22 páginas por minuto, mejora fácilmente la eficiencia del trabajo.",
+        "description": {
+            "Conectividad": "USB 2.0, 2,4 G Wi-Fi (IEEE802.11 b/g/n), Bluetooth",
+            "Cartucho/toner": "TL-*2310H"
+        },
+        "price": 199999,
+        "imageUrl": "/images/impresora-BP2300.jpg"
+    },
+    {
+        "id": "13",
+        "name": "Impresora Pantum multifunción láser monocromática M6509NW",
+        "brand": "Pantum",
+        "category": "Impresora",
+        "feature": "Compacto y económico para ayudarle a imprimir fácilmente A4 velocidad de impresión de hasta 22 páginas por minuto, con tres en una función de impresión, copia y escaneo, fácil de cumplir los requisitos de trabajo de oficina",
+        "description": {
+            "Conectividad": "USB 2.0, 2,4 G Wi-Fi (IEEE802.11 b/g/n), Bluetooth",
+            "Cartucho/toner": "TL-*2310H"
+        },
+        "price": 319999,
+        "imageUrl": "/images/impresora-M6509.jpg"
+    },
+    {
+        "id": "14",
+        "name": "Notebook Exo 14 Intel  128GB SSD",
+        "brand": "Exo",
+        "category": "Notebook",
+        "feature": "Posee un diseño elegante y moderno con un perfil ultra delgado que la hace fácil de transportar. La notebook Exo cuenta con una tecnología de audio High Definition, que te brinda una experiencia de sonido envolvente y de alta calidad mientras disfrutas de tus películas, música o videos favoritos.",
+        "description": {
+            "almacenamiento": "128 GB",
+            "SistemaOperativo": "windows 11",
+            "RAM": "4GB",
+            "pantalla": "14",
+            "procesador": "Intel® CELERON®"
+        },
+        "price": 339999,
+        "imageUrl": "/images/notebook-EXO.jpg"
+    },
+    {
+        "id": "15",
+        "name": "Notebook ASUS Vivobook 15 X1504",
+        "brand": "ASUS",
+        "category": "Notebook",
+        "feature": "Las notebooks Asus Vivobook 15 X1504VA-NJ109W cuentan con un diseño clásico y funcional. Es un modelo premium orientado tanto a profesionales como a usuarios que buscan un equilibrio entre rendimiento y portabilidad. Su procesador Intel Core i7 y su memoria RAM de 16 GB se complementan para ofrecer un mayor rendimiento con un bajo consumo de energía.",
+        "description": {
+            "almacenamiento": "512 GB",
+            "SistemaOperativo": "windows 11",
+            "RAM": "16GB",
+            "pantalla": "15.5",
+            "procesador": "Intel® Core™ i7-1355U"
+        },
+        "price": 1499999,
+        "imageUrl": "/images/Notebook-ASUS-Go15.jpg"
+    },
+    {
+        "id": "16",
+        "name": "Tablet Lenovo M11 8GB + Pen",
+        "brand": "Lenovo",
+        "category": "Tablet",
+        "feature": "Diseñado específicamente para mentes curiosas y dinámicas, este dispositivo supera cualquier expectativa en cuanto a una experiencia de juego cómoda, la realización de múltiples tareas a la vez sin problemas y la transmisión fluida, con 8GB de RAM y almacenamiento de 128GB. Disfrutá de un rendimiento superior con el procesador de ocho núcleos MediaTek Helio G88 de la tablet Lenovo Tab M11.",
+        "description": {
+            "almacenamiento": "128 GB",
+            "camaraFrontal": "2 MP",
+            "camaraPosterior": "8 MP",
+            "SistemaOperativo": "Android 14",
+            "RAM": "8GB",
+            "pantalla": "11"
+        },
+        "price": 489999,
+        "imageUrl": "/images/Tablet-Lenovo.jpg"
     }
 ]
