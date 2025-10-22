@@ -12,8 +12,8 @@ export const Header = () => {
         <header>
             <Link to={"/"}>
                 <section className="logo_header">
-                    <img src="/images/galaxy-a56.png" alt="Logo comercio" />
-                    <p>Mi Tienda</p>
+                    <img src="/images/logo alternativo.png" alt="Logo comercio" />
+                    <p>NeoTech</p>
                 </section>
             </Link>
 
