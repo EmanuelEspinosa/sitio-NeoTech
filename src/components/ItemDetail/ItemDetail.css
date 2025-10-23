@@ -19,7 +19,7 @@
     max-width: 500px;
     border-radius: 16px;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 255, 200, 0.2);
+    box-shadow: 5px 5px 15px rgba(0, 255, 200, 0.2);
     transition: transform 0.3s ease;
     flex: 1;
 }
@@ -85,6 +85,23 @@
     color: #00bfff;
     text-shadow: 0 0 4px rgba(0, 255, 200, 0.5);
     text-align: left;
+
+}
+
+.btn-agregarCarrito{
+    background-color: #0ca4d6;
+    color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: .9rem;
+    border: none;
+}
+
+.btn-agregarCarrito:hover{
+    box-shadow: 2px 2px 12px #00bfff79;
+
 
 }
 

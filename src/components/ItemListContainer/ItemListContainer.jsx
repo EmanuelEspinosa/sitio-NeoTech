@@ -15,7 +15,7 @@ export const ItemListContainer = () => {
     useEffect(() => {
         fetch("/data/products.json")
             .then((res) => {
-                if(!res.ok){
+                if (!res.ok) {
                     throw new Error("Hubo un problema al buscar productos");
                 }
                 return res.json();
@@ -32,16 +32,18 @@ export const ItemListContainer = () => {
         <section className="sectionProducts">
             <h1>Bienvenidos</h1>
 
-            <div className="listproducts">
-                <ItemList list={productosVisibles} />
-            </div>
+            <div className="products-container">
+                <div className="listproducts">
+                    <ItemList list={productosVisibles} />
+                </div>
 
-            <Pagination
-                products={products}
-                paginaActual={paginaActual}
-                setPaginaActual={setPaginaActual}
-                productosPorPagina={productosPorPagina}
-            />
+                <Pagination
+                    products={products}
+                    paginaActual={paginaActual}
+                    setPaginaActual={setPaginaActual}
+                    productosPorPagina={productosPorPagina}
+                />
+            </div>
         </section>
     );
 };

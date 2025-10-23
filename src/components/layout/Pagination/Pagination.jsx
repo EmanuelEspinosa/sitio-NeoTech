@@ -23,7 +23,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
             <button
                 key={i}
                 onClick={() => setPaginaActual(i + 1)}
-                className={paginaActual === i + 1 ? "activo" : ""}
+                className={paginaActual === i + 1 ? "activo" : "btn-page"}
                 >    
                 {i + 1}
             </button>
@@ -31,7 +31,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
     }
 
     return (
-        <div className="paginacion">
+        <div className="pagination">
             <button className={`pagination-previous ${paginaActual === 1 ? 'is-disabled' : ''}`} onClick={onPreviusPage}>Anterior</button>
             {botones}
             <button className={`pagination-next ${paginaActual >= totalPages ? 'is-disabled' : ''}`} onClick={onNextPage}>Siguiente</button>

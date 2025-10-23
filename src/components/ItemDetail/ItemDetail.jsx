@@ -61,7 +61,7 @@ export const ItemDetail = ({ detail }) => {
                         </li>
                     ))}
                 </ul>
-                <button onClick={handleAddClick}>Agregar al carrito</button>
+                <button className="btn-agregarCarrito" onClick={handleAddClick}>Agregar al carrito</button>
             </div>
 
             {/* MODAL DE CONFIRMACIÓN */}
