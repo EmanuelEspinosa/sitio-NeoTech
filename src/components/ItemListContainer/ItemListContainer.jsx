@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { Pagination } from "../Pagination/Pagination";
+import { Pagination } from "../layout/Pagination/Pagination";
 
 export const ItemListContainer = () => {
     const [products, setProductos] = useState([]);

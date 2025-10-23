@@ -44,7 +44,7 @@
 
 .item-detail__info h3 {
     font-size: 1.1rem;
-    color: #00ffc8;
+    color: #00bfff;
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -74,14 +74,15 @@
     border-radius: 8px;
     font-size: 0.95rem;
     color: #e0e0e0;
-    border-left: 4px solid #00ffc8;
+    border-left: 4px solid #00bfff;
+    box-shadow: 2px 2px 12px #00bfff79;
 }
 
 
 .item-detail__price {
     font-size: 2rem;
     font-weight: bold;
-    color: #00ffc8;
+    color: #00bfff;
     text-shadow: 0 0 4px rgba(0, 255, 200, 0.5);
     text-align: left;
 
@@ -94,8 +95,13 @@
     position: absolute;
     top: 1.2rem;
     right: 1.2rem;
+    padding: .2rem;
+    transition: .5s;
+    border-radius: 10px;
 }
 
 .icono-cierreCard:hover{
-    color: red;
+    background-color: red; 
+    transition: .5s;
 }
+
