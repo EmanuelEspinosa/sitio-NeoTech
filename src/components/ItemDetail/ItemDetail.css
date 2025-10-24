@@ -122,3 +122,11 @@
     transition: .5s;
 }
 
+@media (max-width: 550px){
+    .icono-cierreCard{
+        top: .7rem;
+        right: .5rem;
+    }
+}
+
+

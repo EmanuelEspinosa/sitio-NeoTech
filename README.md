@@ -1,16 +1,37 @@
-# React + Vite
+# Sitio Web de E-commerce - NeoTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una simulación de una tienda tecnológica llamada **NeoTech**, desarrollada como parte del curso **Front-End con React** del programa **Talento Tech**, impulsado por el Gobierno de la Ciudad de Buenos Aires.
 
-Currently, two official plugins are available:
+El sitio es desarrollado con **React**, aplicando una arquitectura basada en componentes reutilizables, lógica de paginación dinámica y un sistema de carrito con estado global.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En esta etapa inicial, se priorizó la modularidad, la escalabilidad y una presentación clara de productos, utilizando estilos personalizados sin frameworks externos. Esto permitió afianzar conocimientos clave en organización visual, encapsulamiento de estilos y blindaje de componentes para futuras integraciones.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sitio en línea
 
-## Expanding the ESLint configuration
+Sitio web publicado: https://neotech-store.netlify.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Funcionalidades principales
+
+- **Listado de productos** con imagen, descripción y atributos
+- **Paginación dinámica** con botones activos y deshabilitados
+- **Carrito de compras** con persistencia de productos seleccionados
+- **Navegación entre secciones**: Home, Sobre Nosotros, Contacto
+- **Estilos encapsulados por componente** para evitar conflictos globales
+
+
+## Tecnologías utilizadas
+
+- React (JSX, componentes, hooks)
+- CSS (modularidad, encapsulamiento, responsive)
+- JavaScript (lógica de interacción y estado)
+- Git y GitHub (versionado y documentación)
+- Netlify (deploy y hosting automático)
+
+
+## Autor
+
+Proyecto realizado por: Emanuel Roberto Espinosa  
+Curso: Front-End React - Talento Tech (CABA)  
+Año: 2025

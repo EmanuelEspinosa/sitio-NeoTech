@@ -40,7 +40,7 @@ export const ItemDetail = ({ detail }) => {
 
     return (
         <section className="item-detail">
-            <Link className="icono-cierreCard" to={"/"}><FontAwesomeIcon icon={faTimes} size="2x" /></Link>
+            <Link className="icono-cierreCard" to={"/"}><FontAwesomeIcon icon={faTimes} size="2x"/></Link>
             <div className="item-detail__image">
                 <img src={imageUrl} alt={name} />
             </div>
