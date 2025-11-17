@@ -12,11 +12,36 @@ export const CartProvider = ({ children }) => {
 
     const addItem = (item) => {
         if (exists(item.id)) {
-            return { success: false, message: "El producto ya está en el carrito" };
+            const updateCart = cart.map((prod) => {
+                if (prod.id === item.id) {
+                    return { ...prod, quantity: prod.quantity + item.quantity };
+                }
+                else {
+                    return prod;
+                }
+            });
+            //console.log("Nuevo carrito:", updateCart);
+            setCart(updateCart);
+            return {
+                success: true,
+                message: `${item.quantity} unidad(es) agregada(s) al producto ya existente`
+            };
+        } else {
+            setCart([...cart, item]);
+            return {
+                success: true,
+                message: `${item.name} agregado al carrito`
+            };
         }
-        setCart([...cart, item]);
-        return { success: true, message: `${item.name} agregado al carrito` };
-    };
+    }
+
+    // const addItem = (item) => {
+    //     if (exists(item.id)) {
+    //         return { success: false, message: "El producto ya está en el carrito" };
+    //     }
+    //     setCart([...cart, item]);
+    //     return { success: true, message: `${item.name} agregado al carrito` };
+    // };
 
     // const addItem = (item) => {
     //     if(exists(item.id)){

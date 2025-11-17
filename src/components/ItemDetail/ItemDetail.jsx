@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { useState } from "react";
 import { ConfirmModalCart } from "../layout/confirmModalCart/ConfirmModalCart";
+import { Count } from "../Count/Count";
 
 export const ItemDetail = ({ detail }) => {
     const {
@@ -20,27 +21,36 @@ export const ItemDetail = ({ detail }) => {
     const { addItem } = useCartContext();
     const [showModal, setShowModal] = useState(false);
     const [confirmMessage, setConfirmMessage] = useState("");
+    const [selectedQuantity, setSelectedQuantity] = useState(0);
 
-    const handleAddClick = () => {
-        setShowModal(true);
+    const handleCancel = () => {
+        setShowModal(false);
+    }
+
+    const handleConfirm = (quantity) => {
+        setSelectedQuantity(quantity); // guardás la cantidad
+        setShowModal(true);            // mostrás el modal
     };
 
-    const handleConfirm = () => {
-        const result = addItem(detail);
+    const handleModalConfirm = () => {
+
+        const itemToAdd = { ...detail, quantity: selectedQuantity };
+        // console.log(itemToAdd); // ← acá sí vas a ver la clave quantity
+        const result = addItem(itemToAdd);
+
+
+        // const result = addItem({ ...detail, quantity: selectedQuantity });
         setConfirmMessage(result.message);
         setTimeout(() => {
             setConfirmMessage("");
             setShowModal(false);
+            setSelectedQuantity(0);
         }, 3000);
-    };
-
-    const handleCancel = () => {
-        setShowModal(false);
     };
 
     return (
         <section className="item-detail">
-            <Link className="icono-cierreCard" to={"/"}><FontAwesomeIcon icon={faTimes} size="2x"/></Link>
+            <Link className="icono-cierreCard" to={"/"}><FontAwesomeIcon icon={faTimes} size="2x" /></Link>
             <div className="item-detail__image">
                 <img src={imageUrl} alt={name} />
             </div>
@@ -61,13 +71,14 @@ export const ItemDetail = ({ detail }) => {
                         </li>
                     ))}
                 </ul>
-                <button className="btn-agregarCarrito" onClick={handleAddClick}>Agregar al carrito</button>
+                <Count btnText={"Agregar al carrito"} onConfirm={handleConfirm} />
+                {/* <button className="btn-agregarCarrito" onClick={handleAddClick}>Agregar al carrito</button> */}
             </div>
 
             {/* MODAL DE CONFIRMACIÓN */}
             {showModal && (
                 <ConfirmModalCart
-                    onConfirm={handleConfirm}
+                    onConfirm={handleModalConfirm}
                     onCancel={handleCancel}
                     message={confirmMessage}
                 />
