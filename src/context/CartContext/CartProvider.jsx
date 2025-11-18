@@ -20,7 +20,6 @@ export const CartProvider = ({ children }) => {
                     return prod;
                 }
             });
-            //console.log("Nuevo carrito:", updateCart);
             setCart(updateCart);
             return {
                 success: true,
@@ -35,38 +34,59 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    // const addItem = (item) => {
-    //     if (exists(item.id)) {
-    //         return { success: false, message: "El producto ya está en el carrito" };
-    //     }
-    //     setCart([...cart, item]);
-    //     return { success: true, message: `${item.name} agregado al carrito` };
-    // };
 
-    // const addItem = (item) => {
-    //     if(exists(item.id)){
-    //         alert("El producto ya existe en el carrito");
-    //         return;
-    //     }
-    //     setCart([...cart, item]);
-    //     alert(`${item.name} agregado`);
-    // };
+    const deleteItem = (id) => {
+        const product = cart.find((p) => p.id === id);
+        const filtered = cart.filter((p) => p.id !== id);
+        setCart(filtered);
+        return {
+            success: true,
+            message: `${product.name} eliminado del carrito`
+        }
+    }
+
+
+    const removeOneUnit = (id) => {
+        const updatedCart = cart.map(p => {
+            if (p.id === id) {
+                const newQuantity = p.quantity - 1;
+                return newQuantity > 0 ? { ...p, quantity: newQuantity } : null;
+            }
+            return p;
+        }).filter(Boolean); // elimina los null si quantity llega a 0
+
+        setCart(updatedCart);
+        return {
+            success: true,
+            message: `Se eliminó 1 unidad del producto`
+        };
+    };
+
+    const total = () => {
+        const total = cart.reduce((acc, p) => acc + p.price * p.quantity, 0);
+        return Math.round(total * 100 ) / 100;
+    }
+
+    const getTotalItems = () => {
+        const totalItems = cart.reduce((acc, p) => acc + p.quantity, 0);
+        return totalItems;
+    };
+
 
     const clearCart = () => {
         setCart([]);
     };
 
-    const getTotalItems = () => {
-        if (cart.length) {
-            return cart.length;
-        }
-    };
-
+    
     const values = {
         cart,
         addItem,
+        deleteItem,
+        removeOneUnit,
+        total,
         clearCart,
         getTotalItems,
+
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>

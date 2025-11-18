@@ -35,7 +35,6 @@ export const ItemDetail = ({ detail }) => {
     const handleModalConfirm = () => {
 
         const itemToAdd = { ...detail, quantity: selectedQuantity };
-        // console.log(itemToAdd); // ← acá sí vas a ver la clave quantity
         const result = addItem(itemToAdd);
 
 
@@ -81,6 +80,7 @@ export const ItemDetail = ({ detail }) => {
                     onConfirm={handleModalConfirm}
                     onCancel={handleCancel}
                     message={confirmMessage}
+                    prompt={`¿Deseás agregar ${detail.name} al carrito?`}
                 />
             )}
         </section>
