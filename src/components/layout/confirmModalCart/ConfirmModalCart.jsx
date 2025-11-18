@@ -22,3 +22,5 @@ export const ConfirmModalCart = ({ onConfirm, onCancel, message, prompt }) => {
         </div>
     );
 };
+
+

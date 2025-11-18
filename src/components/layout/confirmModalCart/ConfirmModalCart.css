@@ -20,6 +20,10 @@
   animation: popIn 0.2s ease;
 }
 
+.modal-content p{
+  color: #FFF;
+}
+
 .modal-buttons {
   display: flex;
   justify-content: center;

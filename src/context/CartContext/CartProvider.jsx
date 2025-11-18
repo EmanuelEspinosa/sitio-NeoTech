@@ -64,7 +64,7 @@ export const CartProvider = ({ children }) => {
 
     const total = () => {
         const total = cart.reduce((acc, p) => acc + p.price * p.quantity, 0);
-        return Math.round(total * 100 ) / 100;
+        return Math.round(total * 100) / 100;
     }
 
     const getTotalItems = () => {
@@ -72,12 +72,20 @@ export const CartProvider = ({ children }) => {
         return totalItems;
     };
 
+    const checkOut = () => {
+        setCart([]);
+        return {
+            success: true,
+            message: `Compra finalizada con éxito. ¡Gracias por tu compra!`
+        };
+    }
+
 
     const clearCart = () => {
         setCart([]);
     };
 
-    
+
     const values = {
         cart,
         addItem,
@@ -86,7 +94,7 @@ export const CartProvider = ({ children }) => {
         total,
         clearCart,
         getTotalItems,
-
+        checkOut
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>

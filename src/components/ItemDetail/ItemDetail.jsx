@@ -80,7 +80,7 @@ export const ItemDetail = ({ detail }) => {
                     onConfirm={handleModalConfirm}
                     onCancel={handleCancel}
                     message={confirmMessage}
-                    prompt={`¿Deseás agregar ${detail.name} al carrito?`}
+                    prompt={`¿Deseás agregar ${selectedQuantity} unidad(es) de ${detail.name} al carrito?`}
                 />
             )}
         </section>

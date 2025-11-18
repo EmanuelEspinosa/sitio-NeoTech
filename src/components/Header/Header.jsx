@@ -30,7 +30,7 @@ export const Header = () => {
                         </ul>
                     </nav>
 
-                    <Link className="item-cart"><FontAwesomeIcon className="icono-cart" icon={faCartShopping} />
+                    <Link className="item-cart" to={"/carrito"}><FontAwesomeIcon className="icono-cart" icon={faCartShopping} />
                         {getTotalItems() > 0 && (
                             <span className="in-cart">{getTotalItems()}</span>
                         )}
