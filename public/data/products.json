@@ -14,7 +14,8 @@
             "Pantalla": "6.7''"
         },
         "price": 1083999,
-        "imageUrl": "/images/galaxy-a56.png"
+        "imageUrl": "/images/galaxy-a56.png",
+        "valoracion": 4.5
     },
     {
         "id": "2",
@@ -31,7 +32,8 @@
             "Pantalla": "6.7''"
         },
         "price": 2658999,
-        "imageUrl": "/images/S25.jpg"
+        "imageUrl": "/images/S25.jpg",
+        "valoracion": 5
     },
     {
         "id": "3",
@@ -48,7 +50,8 @@
             "Pantalla": "6.9''"
         },
         "price": 3428999,
-        "imageUrl": "/images/s25-ultra.png"
+        "imageUrl": "/images/s25-ultra.png",
+        "valoracion": 5
     },
     {
         "id": "4",
@@ -65,7 +68,8 @@
             "Pantalla": "6.67''"
         },
         "price": 1133599,
-        "imageUrl": "/images/poco-x7-pro.png"
+        "imageUrl": "/images/poco-x7-pro.png",
+        "valoracion": 4.5
     },
     {
         "id": "5",
@@ -82,7 +86,8 @@
             "Pantalla": "6.75''"
         },
         "price": 299999,
-        "imageUrl": "/images/zte-blade-a55.png"
+        "imageUrl": "/images/zte-blade-a55.png",
+        "valoracion": 4
     },
     {
         "id": "6",
@@ -99,7 +104,8 @@
             "Pantalla": "6.6''"
         },
         "price": 1083999,
-        "imageUrl": "/images/TCL-50.png"
+        "imageUrl": "/images/TCL-50.png",
+        "valoracion": 4.5
     },
     {
         "id": "7",
@@ -116,7 +122,8 @@
             "Pantalla": "6.7''"
         },
         "price": 1083999,
-        "imageUrl": "/images/galaxy-A06.jpg"
+        "imageUrl": "/images/galaxy-A06.jpg",
+        "valoracion": 4
     },
     {
         "id": "8",
@@ -133,7 +140,8 @@
             "Pantalla": "6.7''"
         },
         "price": 1083999,
-        "imageUrl": "/images/galaxy_A35.png"
+        "imageUrl": "/images/galaxy_A35.png",
+        "valoracion": 4.5
     },
     {
         "id": "9",
@@ -146,7 +154,8 @@
             "Pantalla": "1.47''"
         },
         "price": 79999,
-        "imageUrl": "/images/Huawei-Band-10.jpg"
+        "imageUrl": "/images/Huawei-Band-10.jpg",
+        "valoracion": 4.5
     },
     {
         "id": "10",
@@ -159,7 +168,8 @@
             "Pantalla": "1.82''"
         },
         "price": 649999,
-        "imageUrl": "/images/WATCH_D2.jpg"
+        "imageUrl": "/images/WATCH_D2.jpg",
+        "valoracion": 5
     },
     {
         "id": "11",
@@ -176,7 +186,8 @@
             "Pantalla": "8.7''"
         },
         "price": 429999,
-        "imageUrl": "/images/tablet-tab-A9.jpg"
+        "imageUrl": "/images/tablet-tab-A9.jpg",
+        "valoracion": 5
     },
     {
         "id": "12",
@@ -189,7 +200,8 @@
             "Cartucho/toner": "TL-*2310H"
         },
         "price": 199999,
-        "imageUrl": "/images/impresora-BP2300.jpg"
+        "imageUrl": "/images/impresora-BP2300.jpg",
+        "valoracion": 4
     },
     {
         "id": "13",
@@ -202,7 +214,8 @@
             "Cartucho/toner": "TL-*2310H"
         },
         "price": 319999,
-        "imageUrl": "/images/impresora-M6509.jpg"
+        "imageUrl": "/images/impresora-M6509.jpg",
+        "valoracion": 4.5
     },
     {
         "id": "14",
@@ -218,7 +231,8 @@
             "Procesador": "Intel® CELERON®"
         },
         "price": 339999,
-        "imageUrl": "/images/notebook-EXO.jpg"
+        "imageUrl": "/images/notebook-EXO.jpg",
+        "valoracion": 4.5
     },
     {
         "id": "15",
@@ -234,7 +248,8 @@
             "Procesador": "Intel® Core™ i7-1355U"
         },
         "price": 1499999,
-        "imageUrl": "/images/Notebook-ASUS-Go15.jpg"
+        "imageUrl": "/images/Notebook-ASUS-Go15.jpg",
+        "valoracion": 5
     },
     {
         "id": "16",
@@ -251,6 +266,7 @@
             "Pantalla": "11''"
         },
         "price": 489999,
-        "imageUrl": "/images/Tablet-Lenovo.jpg"
+        "imageUrl": "/images/Tablet-Lenovo.jpg",
+        "valoracion": 5
     }
 ]

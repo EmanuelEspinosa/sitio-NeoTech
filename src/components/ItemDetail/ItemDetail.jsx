@@ -28,8 +28,8 @@ export const ItemDetail = ({ detail }) => {
     }
 
     const handleConfirm = (quantity) => {
-        setSelectedQuantity(quantity); // guardás la cantidad
-        setShowModal(true);            // mostrás el modal
+        setSelectedQuantity(quantity); // se guarda la cantidad
+        setShowModal(true);            // se muestra el modal
     };
 
     const handleModalConfirm = () => {
