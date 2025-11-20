@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { Pagination } from "../layout/Pagination/Pagination";
+import { FilterBar } from "../layout/FilterBar/FilterBar";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
     const [products, setProductos] = useState([]);
+    const [categoris, setCategorias] = useState([]);
     const [paginaActual, setPaginaActual] = useState(1);
+    const { category } = useParams();
 
     const productosPorPagina = 6;
     const indiceInicial = (paginaActual - 1) * productosPorPagina;
@@ -21,17 +25,27 @@ export const ItemListContainer = () => {
                 return res.json();
             })
             .then((data) => {
-                setProductos(data);
+
+                const categoriasUnicas = [...new Set(data.flatMap((prod) => prod.category))];
+                setCategorias(categoriasUnicas);
+
+
+                if (category) {
+                    setProductos(data.filter((prod) => prod.category === category));
+                } else {
+                    setProductos(data);
+                }
             })
             .catch((err) => {
                 console.log(err);
             });
-    }, []);
+    }, [category]);
 
     return (
         <section className="sectionProducts">
             <h1>Bienvenidos</h1>
 
+            <FilterBar categorias={categoris} />
             <div className="products-container">
                 <div className="listproducts">
                     <ItemList list={productosVisibles} />
