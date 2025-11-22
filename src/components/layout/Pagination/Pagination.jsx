@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Pagination.css"
+import { Link } from "react-router-dom";
 
 export const Pagination = ({ products, paginaActual, setPaginaActual, productosPorPagina }) => {
 
@@ -8,13 +9,32 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
     const onPreviusPage = () => {
         if (paginaActual > 1) {
             setPaginaActual(paginaActual - 1);
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
         }
     }
     const onNextPage = () => {
 
         if (paginaActual < totalPages) {
             setPaginaActual(paginaActual + 1);
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
         }
+    }
+
+    const pageActualSet = (page) => {
+        setPaginaActual(page);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     }
 
     const botones = [];
@@ -22,9 +42,9 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
         botones.push(
             <button
                 key={i}
-                onClick={() => setPaginaActual(i + 1)}
+                onClick={() => pageActualSet(i + 1)}
                 className={paginaActual === i + 1 ? "activo" : "btn-page"}
-                >    
+            >
                 {i + 1}
             </button>
         );

@@ -15,9 +15,9 @@ export const Footer = () => {
                     </div>
 
                     <div class="datos_footer-section1">
-                        <div><FontAwesomeIcon icon={faMap} />Dirección: Av.Rivadavia 4500,CABA</div>
-                        <div><FontAwesomeIcon icon={faPhone} />Teléfono: 54 11 - 4250-0111</div>
-                        <div><FontAwesomeIcon icon={faEnvelope} /> email: informacion@neotech.org.ar</div>
+                        <div><FontAwesomeIcon icon={faMap} />Av.Rivadavia 4500 - CABA</div>
+                        <div><FontAwesomeIcon icon={faPhone} />54 11 - 4250-0111</div>
+                        <div><FontAwesomeIcon icon={faEnvelope} />informacion@neotech.org.ar</div>
 
                     </div>
                 </div>
