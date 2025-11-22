@@ -3,25 +3,38 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProducts";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
+import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
+import { fieldsByCategory } from "../../../../public/data/fieldsByCategory";
+
+const initialProduct = {
+    name: "",
+    brand: "",
+    category: "",
+    feature: "",
+    description: "",
+    price: "",
+    valoracion: ""
+};
 
 export const ProductFormContainer = () => {
-    const [loading, setLoading] = useState();
+    const [showModal, setShowModal] = useState(false);
+    const [messageConfirm, setMessageConfirm] = useState("");
+    const [loading, setLoading] = useState(false);
     const [file, setFile] = useState(null);
-    const [errors, setErrors] = useState("");
-    const [product, setProduct] = useState({
-        name: "",
-        brand: "",
-        category: "",
-        feature: "",
-        description: "",
-        price: "",
-        valoracion: ""
-    });
+    const [errors, setErrors] = useState({});
+    const [product, setProduct] = useState(initialProduct);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProduct({ ...product, [name]: value });
     };
+
+    const handleReset = () => {
+        setProduct(initialProduct);
+        setFile(null);
+        setErrors({});
+    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,25 +50,34 @@ export const ProductFormContainer = () => {
 
         try {
             const imageUrl = await uploadToImgbb(file);
+
+            // Construir objeto description según categoría
+            const descriptionObj = {};
+            fieldsByCategory[product.category]?.forEach(field => {
+                descriptionObj[field] = product[field];
+            });
+
             const productData = {
-                ...product,
+                name: product.name,
+                brand: product.brand,
+                category: product.category,
+                feature: product.feature,
+                description: JSON.stringify(descriptionObj),
                 price: Number(product.price),
-                valoracion: Number(product.valoracion),
-                imageUrl
+                imageUrl,
+                valoracion: Number(product.valoracion)
             };
 
             await createProduct(productData);
-            alert("Producto cargado con exito");
+            setShowModal(true);
+            setMessageConfirm("Producto cargado con exito");
+            setTimeout(() => {
+                setShowModal(false);
+                setMessageConfirm("");
+            }, 3000);
+            // alert("Producto cargado con exito");
 
-            setProduct({
-                name: "",
-                brand: "",
-                category: "",
-                feature: "",
-                description: "",
-                price: "",
-                valoracion: ""
-            });
+            setProduct(initialProduct);
             setFile(null);
         } catch (error) {
             setErrors({ general: error.message });
@@ -65,13 +87,21 @@ export const ProductFormContainer = () => {
     };
 
     return (
-        <ProductFormUI
-            product={product}
-            errors={errors}
-            onChange={handleChange}
-            onFileChange={setFile}
-            loading={loading}
-            onSubmit={handleSubmit}
-        />
+        <>
+            <ProductFormUI
+                product={product}
+                errors={errors}
+                onChange={handleChange}
+                onFileChange={setFile}
+                loading={loading}
+                onSubmit={handleSubmit}
+                onReset={handleReset}
+            />
+
+            {showModal && (
+                <ConfirmModalCart message={messageConfirm} />
+            )}
+        </>
+
     );
 }

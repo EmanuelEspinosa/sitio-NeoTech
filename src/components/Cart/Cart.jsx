@@ -21,16 +21,16 @@ export const Cart = () => {
 
 
     const clearCarrito = () => {
-       setModalType("clearCart");
-        setShowModal(true); 
+        setModalType("clearCart");
+        setShowModal(true);
     }
 
     const handleClearCarrito = () => {
         clearCart();
         setShowModal(false);
     }
-    
-    
+
+
     const handleCheckoutConfirm = () => {
         const result = checkOut();
         setCheckoutMessage(result.message);
@@ -79,7 +79,7 @@ export const Cart = () => {
                                     <h3>{prod.name}</h3>
                                 </div>
 
-                              
+
 
                                 <span>Precio  ${prod.price.toLocaleString("es-AR")}</span>
 
@@ -96,10 +96,10 @@ export const Cart = () => {
                                         </button>
                                     </div>
                                     <span>Subtotal ${(prod.price * prod.quantity).toLocaleString("es-AR")}</span>
-                                    
+
                                     <button className="btn-elim" onClick={() => deleteItem(prod.id)}>Eliminar</button>
                                 </div>
-                                
+
 
 
                             </li>
@@ -168,10 +168,10 @@ export const Cart = () => {
                 <ConfirmModalCart
                     onConfirm={handleClearCarrito}
                     onCancel={handleCancel}
-                    prompt="¿Desea vaciar el carrito?" 
+                    prompt="¿Desea vaciar el carrito?"
                 />
             )}
-            
+
         </section>
     );
 }

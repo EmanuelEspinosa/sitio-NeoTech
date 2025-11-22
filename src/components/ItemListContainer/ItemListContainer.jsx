@@ -17,6 +17,7 @@ export const ItemListContainer = () => {
     const productosVisibles = products.slice(indiceInicial, indiceFinal);
 
     useEffect(() => {
+        // fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
         fetch("/data/products.json")
             .then((res) => {
                 if (!res.ok) {
