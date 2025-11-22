@@ -6,6 +6,8 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { CartProvider } from './context/CartContext/CartProvider';
 import { Cart } from './components/Cart/Cart';
 import { ProductFormContainer } from './components/adminComponents/ProductFormContainer/ProductFormContainer';
+import { Footer } from './components/Footer/Footer';
+import { ScrollToTop } from './components/layout/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <Header />
+          <ScrollToTop />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:category' element={<ItemListContainer />}/>
@@ -20,6 +23,7 @@ function App() {
             <Route path='/carrito' element={<Cart />}/>
             <Route path='/admin' element={<ProductFormContainer />}/>
           </Routes>
+          <Footer />
         </CartProvider>
       </BrowserRouter>
     </>
