@@ -10,7 +10,7 @@ export const Footer = () => {
             <section class="footer-secciones">
                 <div class="footer_card footer_section1">
                     <div class="section1-logo">
-                        <img src="/images/logo alternativo.png" alt="Logo comercio" />
+                        <img src="/images/logo-alternativo.png" alt="Logo comercio" />
                         <h3>NeoTech</h3>
                     </div>
 
