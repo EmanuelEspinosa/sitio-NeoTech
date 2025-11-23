@@ -37,7 +37,7 @@ export const Login = () => {
     return (
         <div className="form-container">
             <section className="form-container-section">
-                <img className="img-form" src="../../../public/images/logo alternativo.png" alt="logo" />
+                <img className="img-form" src="/images/logo alternativo.png" alt="logo" />
                 <form onSubmit={handleSubmit} className="form-admin">
                     <div className="form-section-input">
                         <input
