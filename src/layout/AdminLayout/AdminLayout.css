@@ -2,6 +2,7 @@
     position: relative;
     background-color: #1e1e2f;
     padding-top: .5rem;
+    min-height: 100vh;
 }
 
 .admin-layout .btn-logout {

@@ -41,7 +41,6 @@
 
 .form-input:focus {
     border-color: #00bfff;
-    /* acento sobrio */
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
     outline: none;
 }

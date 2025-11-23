@@ -11,7 +11,7 @@ export const Login = () => {
     const navigate = useNavigate();
 
     if (user) {
-        return <Navigate to="/admin/alta-productos" />
+        return <Navigate to="/admin/dashboard" />
     }
 
     const handleChange = (e) => {
@@ -24,7 +24,7 @@ export const Login = () => {
         const success = login(userForm.name, userForm.password);
 
         if (success) {
-            navigate("/admin/alta-productos");
+            navigate("/admin/dashboard");
         } else {
             setUserForm({ name: "", password: "" });
             setShowModal(true);

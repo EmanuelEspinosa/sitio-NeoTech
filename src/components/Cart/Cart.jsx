@@ -108,7 +108,6 @@ export const Cart = () => {
 
                     <div className="cart-summary">
                         <h3>Pedido</h3>
-                        {/* <p>Total de productos: {getTotalItems()}</p> */}
                         <div className="cart_summary-item">
                             <p>Total de productos</p>
                             <p><strong>{getTotalItems()}</strong></p>

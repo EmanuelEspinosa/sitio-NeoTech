@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background-color: #1e1e2f;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -112,7 +112,7 @@
 
 @media (max-width: 550px) {
   .productFormContainer{
-    padding-top: 4.5rem;
+    padding-top: 1rem;
   }
   .product-form{
     max-width: 24rem;

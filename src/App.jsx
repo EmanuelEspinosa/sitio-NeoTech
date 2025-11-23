@@ -12,6 +12,7 @@ import { MainLayout } from './layout/MainLayout/MainLayout';
 import { AdminLayout } from './layout/AdminLayout/AdminLayout';
 import { RutaProtegida } from './components/RutaProtegida/RutaProtegida';
 import { Login } from './components/Login/Login';
+import { AdminDashboard } from './layout/AdminLayout/AdminDashboard/AdminDashboard';
 
 
 function App() {
@@ -29,10 +30,9 @@ function App() {
 
           <Route path='/admin' element={<AdminLayout />}>
             <Route index element={<Login />} />
-
-            <Route path='alta-productos' element={
+            <Route path='dashboard' element={
               <RutaProtegida>
-                <ProductFormContainer />
+                <AdminDashboard />
               </RutaProtegida>
             } />
           </Route>

@@ -3,11 +3,11 @@ const BASE_URL = "https://691f471ebb52a1db22c124a1.mockapi.io/products";
 export const createProduct = async (product) => {
     const res = await fetch(BASE_URL, {
         method: "POST",
-        headers: {"Content-type" : "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(product)
-    }); 
+    });
 
-    if(!res.ok){
+    if (!res.ok) {
         throw new Error("No se pudo crear el producto");
     }
 
@@ -17,13 +17,13 @@ export const createProduct = async (product) => {
 
 export const getProducts = async (category) => {
     let url = BASE_URL;
-    if(category){
+    if (category) {
         url = `${BASE_URL}?category=${category}`;
     }
 
     const res = await fetch(url);
 
-    if(!res.ok){
+    if (!res.ok) {
         throw new Error("Error al listar productos");
     }
 
@@ -36,17 +36,28 @@ export const getProducts = async (category) => {
 
 export const getProductById = async (id) => {
     let url = BASE_URL;
-    if(id){
+    if (id) {
         url = `${BASE_URL}/${id}`;
     }
     const res = await fetch(url);
-    if(!res.ok){
+    if (!res.ok) {
         throw new Error("Producto no encontrado");
     }
 
     const product = await res.json();
-    return {...product, description: JSON.parse(product.description)};
+    return { ...product, description: JSON.parse(product.description) };
 }
 
+/**************************************************************/
+export const deleteProduct = async (id) => {
+    const url = `${BASE_URL}/${id}`;
+    const res = await fetch(url, { method: "DELETE" });
+
+    if (!res.ok) {
+        throw new Error("No se pudo eliminar el producto");
+    }
+
+    return true;
+}
 
 
