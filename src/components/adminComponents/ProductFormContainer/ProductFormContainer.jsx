@@ -3,8 +3,8 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProducts";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
-import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
 import { fieldsByCategory } from "../../../../public/data/fieldsByCategory";
+import { ConfirmModalCart } from "../../../layout/confirmModalCart/ConfirmModalCart";
 
 const initialProduct = {
     name: "",

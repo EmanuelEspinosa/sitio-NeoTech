@@ -30,10 +30,11 @@
 
 }
 
-.product-img img {
+.product-img > img {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+    border-radius: 10px;
 }
 
 .product-info {

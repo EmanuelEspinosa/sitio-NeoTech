@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { Pagination } from "../layout/Pagination/Pagination";
-import { FilterBar } from "../layout/FilterBar/FilterBar";
+import { Pagination } from "../../layout/Pagination/Pagination";
+import { FilterBar } from "../../layout/FilterBar/FilterBar";
 import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {

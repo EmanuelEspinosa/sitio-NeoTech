@@ -8,7 +8,7 @@ export const ProductFormUI = ({
     onChange,
     onFileChange,
     onSubmit,
-    onReset
+    onReset,
     // fieldsByCategory
 }) => {
     return (
@@ -128,10 +128,7 @@ export const ProductFormUI = ({
                         <button type="button" className="btn btn-secondary" onClick={onReset}>
                             Limpiar
                         </button>
-                        
                     </div>
-
-
                 </form>
             </section>
         </div>

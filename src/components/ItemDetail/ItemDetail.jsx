@@ -4,8 +4,9 @@ import "./ItemDetail.css"
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { useState } from "react";
-import { ConfirmModalCart } from "../layout/confirmModalCart/ConfirmModalCart";
+
 import { Count } from "../Count/Count";
+import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
 
 export const ItemDetail = ({ detail }) => {
     const {

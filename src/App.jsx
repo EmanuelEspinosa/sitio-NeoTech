@@ -7,24 +7,36 @@ import { CartProvider } from './context/CartContext/CartProvider';
 import { Cart } from './components/Cart/Cart';
 import { ProductFormContainer } from './components/adminComponents/ProductFormContainer/ProductFormContainer';
 import { Footer } from './components/Footer/Footer';
-import { ScrollToTop } from './components/layout/ScrollToTop/ScrollToTop';
+import { ScrollToTop } from './layout/ScrollToTop/ScrollToTop';
+import { MainLayout } from './layout/MainLayout/MainLayout';
+import { AdminLayout } from './layout/AdminLayout/AdminLayout';
+import { RutaProtegida } from './components/RutaProtegida/RutaProtegida';
+import { Login } from './components/Login/Login';
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <CartProvider>
-          <Header />
-          <ScrollToTop />
-          <Routes>
+        <ScrollToTop />
+        <Routes>
+          <Route element={<MainLayout />}>
             <Route path='/' element={<ItemListContainer />} />
-            <Route path='/category/:category' element={<ItemListContainer />}/>
-            <Route path='/detail/:id' element={<ItemDetailContainer />}/>
-            <Route path='/carrito' element={<Cart />}/>
-            <Route path='/admin' element={<ProductFormContainer />}/>
-          </Routes>
-          <Footer />
-        </CartProvider>
+            <Route path='/category/:category' element={<ItemListContainer />} />
+            <Route path='/detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/carrito' element={<Cart />} />
+          </Route>
+
+          <Route path='/admin' element={<AdminLayout />}>
+            <Route index element={<Login />} />
+
+            <Route path='alta-productos' element={
+              <RutaProtegida>
+                <ProductFormContainer />
+              </RutaProtegida>
+            } />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );

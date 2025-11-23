@@ -1,0 +1,32 @@
+.admin-layout {
+    position: relative;
+    background-color: #1e1e2f;
+    padding-top: .5rem;
+}
+
+.admin-layout .btn-logout {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: .8rem;
+    background-color: rgb(165, 42, 42);
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    font-size: .9rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.admin-layout .btn-logout:hover {
+    background-color: rgb(221, 8, 8);
+}
+
+@media (max-width: 550px) {
+
+    .admin-layout .btn-logout {
+        top: 1.2rem;
+        right: 1rem;
+    
+    }
+}

@@ -1,7 +1,7 @@
 import "./Cart.css"
 import { useCartContext } from "../../context/CartContext/useCartContext";
 import { useState } from "react";
-import { ConfirmModalCart } from "../layout/confirmModalCart/ConfirmModalCart";
+import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
 
 export const Cart = () => {
     const {
