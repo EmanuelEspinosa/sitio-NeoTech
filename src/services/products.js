@@ -15,3 +15,38 @@ export const createProduct = async (product) => {
     return result;
 };
 
+export const getProducts = async (category) => {
+    let url = BASE_URL;
+    if(category){
+        url = `${BASE_URL}?category=${category}`;
+    }
+
+    const res = await fetch(url);
+
+    if(!res.ok){
+        throw new Error("Error al listar productos");
+    }
+
+    const results = await res.json();
+    const parsedResult = results.map(product => ({
+        ...product, description: JSON.parse(product.description)
+    }));
+    return parsedResult;
+};
+
+export const getProductById = async (id) => {
+    let url = BASE_URL;
+    if(id){
+        url = `${BASE_URL}/${id}`;
+    }
+    const res = await fetch(url);
+    if(!res.ok){
+        throw new Error("Producto no encontrado");
+    }
+
+    const product = await res.json();
+    return {...product, description: JSON.parse(product.description)};
+}
+
+
+

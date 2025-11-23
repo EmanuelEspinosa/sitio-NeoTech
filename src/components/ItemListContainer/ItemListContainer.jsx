@@ -4,6 +4,7 @@ import "./ItemListContainer.css";
 import { Pagination } from "../../layout/Pagination/Pagination";
 import { FilterBar } from "../../layout/FilterBar/FilterBar";
 import { useParams } from "react-router-dom";
+import { getProducts } from "../../services/products";
 
 export const ItemListContainer = () => {
     const [products, setProductos] = useState([]);
@@ -17,30 +18,43 @@ export const ItemListContainer = () => {
     const productosVisibles = products.slice(indiceInicial, indiceFinal);
 
     useEffect(() => {
-        // fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
-        fetch("/data/products.json")
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Hubo un problema al buscar productos");
-                }
-                return res.json();
-            })
+        getProducts(category)
             .then((data) => {
-
                 const categoriasUnicas = [...new Set(data.flatMap((prod) => prod.category))];
                 setCategorias(categoriasUnicas);
-
-
-                if (category) {
-                    setProductos(data.filter((prod) => prod.category === category));
-                } else {
-                    setProductos(data);
-                }
+                setProductos(data);
             })
             .catch((err) => {
-                console.log(err);
+                console.error("Error al obtener productos:", err);
             });
     }, [category]);
+
+
+    // useEffect(() => {
+    //     // fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
+    //     fetch("/data/products.json")
+    //         .then((res) => {
+    //             if (!res.ok) {
+    //                 throw new Error("Hubo un problema al buscar productos");
+    //             }
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+
+    //             const categoriasUnicas = [...new Set(data.flatMap((prod) => prod.category))];
+    //             setCategorias(categoriasUnicas);
+
+
+    //             if (category) {
+    //                 setProductos(data.filter((prod) => prod.category === category));
+    //             } else {
+    //                 setProductos(data);
+    //             }
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    // }, [category]);
 
     return (
         <section className="sectionProducts">
