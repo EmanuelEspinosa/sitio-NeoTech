@@ -124,8 +124,26 @@
 
 @media (max-width: 550px){
 
+    .item-detail{
+        flex-direction: column;
+        align-items: center;
+    }
+
     .item-detail__info{
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    .item-detail__specs{
+        width: 100%;
+    }
+
+    .btn-addCart{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .icono-cierreCard{

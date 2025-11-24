@@ -77,7 +77,10 @@ export const ItemDetail = ({ detail }) => {
                         </li>
                     ))}
                 </ul>
-                <Count btnText={"Agregar al carrito"} onConfirm={handleConfirm} />
+                <div className="btn-addCart">
+                    <Count btnText={"Agregar al carrito"} onConfirm={handleConfirm} />
+                </div>
+
                 {/* <button className="btn-agregarCarrito" onClick={handleAddClick}>Agregar al carrito</button> */}
             </div>
 
