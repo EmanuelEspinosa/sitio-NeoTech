@@ -62,7 +62,7 @@ export const AdminProductsList = () => {
                         <li key={p.id} className="itemList-product">
                             <img src={p.imageUrl} className="image-product" />
                             <p>{p.name}</p>
-                            <p>{p.category}</p>
+                            <p id="p-cateogry">{p.category}</p>
                             <p>${p.price.toLocaleString()}</p>
                             <button onClick={() => handleDelete(p.id)} className="admin-btnDelete">Eliminar</button>
                         </li>

@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import { Count } from "../Count/Count";
 import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
+import { StarRating } from "../../layout/StarRating/StarRating";
 
 export const ItemDetail = ({ detail }) => {
     const {
@@ -16,7 +17,8 @@ export const ItemDetail = ({ detail }) => {
         feature,
         description,
         price,
-        imageUrl
+        imageUrl,
+        valoracion
     } = detail;
 
     const { addItem } = useCartContext();
@@ -59,6 +61,7 @@ export const ItemDetail = ({ detail }) => {
 
                 <h3>{brand} · {category}</h3>
                 <h2>{name}</h2>
+                <StarRating rating={valoracion} />
 
                 <p className="item-detail__price">${price.toLocaleString("es-AR")}</p>
                 <p className="item-detail__feature">{feature}</p>
@@ -66,7 +69,10 @@ export const ItemDetail = ({ detail }) => {
                 <ul className="item-detail__specs">
                     {Object.entries(description).map(([key, value]) => (
                         <li key={key}>
-                            <p><strong>{key}</strong></p>
+                            {key.length > 17 ?
+                                <p><strong>{key.slice(0, 16)}...</strong></p> :
+                                <p><strong>{key}</strong></p>}
+                            {/* <p><strong>{key}</strong></p> */}
                             <strong>{value}</strong>
                         </li>
                     ))}

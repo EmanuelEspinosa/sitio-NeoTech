@@ -123,6 +123,11 @@
 }
 
 @media (max-width: 550px){
+
+    .item-detail__info{
+        margin: auto;
+    }
+
     .icono-cierreCard{
         top: .7rem;
         right: .5rem;
