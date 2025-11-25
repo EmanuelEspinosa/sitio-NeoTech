@@ -70,7 +70,7 @@ export const ProductFormContainer = () => {
 
             await createProduct(productData);
             setShowModal(true);
-            setMessageConfirm("Producto cargado con exito");
+            setMessageConfirm("Producto cargado con éxito");
             setTimeout(() => {
                 setShowModal(false);
                 setMessageConfirm("");

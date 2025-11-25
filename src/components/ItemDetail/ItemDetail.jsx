@@ -69,11 +69,8 @@ export const ItemDetail = ({ detail }) => {
                 <ul className="item-detail__specs">
                     {Object.entries(description).map(([key, value]) => (
                         <li key={key}>
-                            {key.length > 17 ?
-                                <p><strong>{key.slice(0, 16)}...</strong></p> :
-                                <p><strong>{key}</strong></p>}
-                            {/* <p><strong>{key}</strong></p> */}
-                            <strong>{value}</strong>
+                            <p className="key-description"><strong>{key}</strong></p>
+                            <strong >{value}</strong>
                         </li>
                     ))}
                 </ul>

@@ -61,9 +61,9 @@ export const AdminProductsList = () => {
                     {products.map(p => (
                         <li key={p.id} className="itemList-product">
                             <img src={p.imageUrl} className="image-product" />
-                            <p>{p.name}</p>
-                            <p id="p-cateogry">{p.category}</p>
-                            <p>${p.price.toLocaleString()}</p>
+                            <p><strong>{p.name}</strong></p>
+                            <p id="p-cateogry"><strong>{p.category}</strong></p>
+                            <p><strong>${p.price.toLocaleString()}</strong></p>
                             <button onClick={() => handleDelete(p.id)} className="admin-btnDelete">Eliminar</button>
                         </li>
                     ))}

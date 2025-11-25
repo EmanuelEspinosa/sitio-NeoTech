@@ -10,7 +10,6 @@
     position: relative;
     width: 95%;
     margin: auto;
-
 }
 
 .item-detail__image{
@@ -79,6 +78,10 @@
     color: #e0e0e0;
     border-left: 4px solid #00bfff;
     box-shadow: 2px 2px 12px #00bfff79;
+}
+
+.key-description{
+    color: #61d8ff;
 }
 
 

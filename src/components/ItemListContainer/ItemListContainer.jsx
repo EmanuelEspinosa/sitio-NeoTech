@@ -5,6 +5,7 @@ import { Pagination } from "../../layout/Pagination/Pagination";
 import { FilterBar } from "../../layout/FilterBar/FilterBar";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../services/products";
+import { fieldsByCategory } from "../../../public/data/fieldsByCategory";
 
 export const ItemListContainer = () => {
     const [products, setProductos] = useState([]);
@@ -18,16 +19,25 @@ export const ItemListContainer = () => {
     const productosVisibles = products.slice(indiceInicial, indiceFinal);
 
     useEffect(() => {
+        setPaginaActual(1)
         getProducts(category)
             .then((data) => {
-                const categoriasUnicas = [...new Set(data.flatMap((prod) => prod.category))];
-                setCategorias(categoriasUnicas);
-                setProductos(data);
+                setCategorias(Object.keys(fieldsByCategory));
+
+                if(data && data.length > 0){
+                    setProductos(data);
+                }
+                else{
+                    setProductos([]);
+                }
             })
             .catch((err) => {
                 console.error("Error al obtener productos:", err);
+                setProductos([]);
             });
     }, [category]);
+
+    
 
 
     // useEffect(() => {
