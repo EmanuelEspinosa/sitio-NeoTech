@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import "./Footer.css"
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 export const Footer = () => {
@@ -28,6 +28,7 @@ export const Footer = () => {
                         <ul>
                             <li><Link className="item-section2" to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</Link></li>
                             <li><Link className="item-section2" to={"/sobreNosotros"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Sobre Nosotros</Link></li>
+                            <li><Link className='item-section2' to={"/products"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >Productos</Link></li>
                             <li><Link className="item-section2" to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contacto</Link></li>
                             <li><Link className="item-section2" to={"/carrito"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Mi Carrito</Link></li>
                         </ul>

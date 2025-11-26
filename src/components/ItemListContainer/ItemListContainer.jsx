@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { Pagination } from "../../layout/Pagination/Pagination";
@@ -17,6 +17,8 @@ export const ItemListContainer = () => {
     const indiceInicial = (paginaActual - 1) * productosPorPagina;
     const indiceFinal = indiceInicial + productosPorPagina;
     const productosVisibles = products.slice(indiceInicial, indiceFinal);
+    const listRef = useRef();
+
 
     useEffect(() => {
         setPaginaActual(1)
@@ -24,10 +26,10 @@ export const ItemListContainer = () => {
             .then((data) => {
                 setCategorias(Object.keys(fieldsByCategory));
 
-                if(data && data.length > 0){
+                if (data && data.length > 0) {
                     setProductos(data);
                 }
-                else{
+                else {
                     setProductos([]);
                 }
             })
@@ -37,7 +39,13 @@ export const ItemListContainer = () => {
             });
     }, [category]);
 
-    
+
+
+    useEffect(() => {
+        if (category || paginaActual > 1) {
+            listRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [category, paginaActual]);
 
 
     // useEffect(() => {
@@ -67,12 +75,12 @@ export const ItemListContainer = () => {
     // }, [category]);
 
     return (
-        <section className="sectionProducts">
+        <section id="products" className="sectionProducts" ref={listRef}>
             <h1>Bienvenidos</h1>
 
             <FilterBar categorias={categoris} />
             <div className="products-container">
-                <div className="listproducts">
+                <div className="listproducts" >
                     <ItemList list={productosVisibles} />
                 </div>
 
