@@ -13,10 +13,10 @@ export const FilterBar = ({categorias}) => {
 
     const handleClick = (cat) => {
         if (cat === "Todas") {
-            navigate("/");
+            navigate("/products");
             toggleDesplegado();
         } else {
-            navigate(`/category/${cat}`);
+            navigate(`/products/category/${cat}`);
             toggleDesplegado();
         }
     };

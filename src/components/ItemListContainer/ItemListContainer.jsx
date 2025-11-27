@@ -76,8 +76,8 @@ export const ItemListContainer = () => {
 
     return (
         <section id="products" className="sectionProducts" ref={listRef}>
-            <h1>Bienvenidos</h1>
-
+            
+            <h1></h1>
             <FilterBar categorias={categoris} />
             <div className="products-container">
                 <div className="listproducts" >

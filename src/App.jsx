@@ -25,9 +25,9 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path='/' element={<Home />}/>
             <Route path='/products' element={<ItemListContainer />} />
-            <Route path='/category/:category' element={<ItemListContainer />} />
-            <Route path='/detail/:id' element={<ItemDetailContainer />} />
-            <Route path='/carrito' element={<Cart />} />
+            <Route path='/products/category/:category' element={<ItemListContainer />} />
+            <Route path='/products/detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
           </Route>
 
           <Route path='/admin' element={<AdminLayout />}>

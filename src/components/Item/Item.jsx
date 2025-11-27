@@ -17,7 +17,7 @@ export const Item = ({ id, name, price, brand, imageUrl, category, feature }) =>
 
                 <div className="price-tag">${price.toLocaleString()}</div>
 
-                <Link to={`/detail/${id}`} className="detail-button">Ver más</Link>
+                <Link to={`/products/detail/${id}`} className="detail-button">Ver más</Link>
             </div>
         </article>
     );
