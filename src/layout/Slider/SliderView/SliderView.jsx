@@ -4,19 +4,9 @@ export const SliderView = ({ slides, active, onPrev, onNext, onDotClick, trackSt
     return (
         <section className="slider">
 
-            {/* <div className="slider_content" style={trackStyle}>
-                {slides.map((slideContent, i) => (
-                    <div key={i} className="item">
-                        {slideContent}
-                    </div>
-                ))}
-            </div> */}
-
             <div className="slider_content" style={trackStyle}>
                 {slides}
             </div>
-
-            {/* {slides} */}
 
             <div className="buttons">
                 <button id="prev" onClick={onPrev}>&#10094;</button>

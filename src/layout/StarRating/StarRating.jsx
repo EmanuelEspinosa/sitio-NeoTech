@@ -1,8 +1,8 @@
 import "./StarRating.css";
 
 export const StarRating = ({ rating }) => {
-    const fullStars = Math.floor(rating);        // cantidad de estrellas completas
-    const hasHalfStar = rating % 1 !== 0;        // si hay media estrella
+    const fullStars = Math.floor(rating);        
+    const hasHalfStar = rating % 1 !== 0;        
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     return (

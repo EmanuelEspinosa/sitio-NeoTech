@@ -44,9 +44,6 @@ export const Home = () => {
 
     const categorias = Object.keys(imagenesPorCategoria);
 
-
-
-
     return (
         <div className="container-page">
             <SliderContainer slides={slides} />
@@ -202,9 +199,6 @@ export const Home = () => {
                     <div className="sucursales-mapa">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.3489323787234!2d-58.4367664849357!3d-34.617003980454915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb6f7e4c84a3%3A0xfed3ea3aa34625f4!2sAv.%20Rivadavia%204500%2C%20C1407%20CABA!5e0!3m2!1ses!2sar!4v1694303889022!5m2!1ses!2sar"
-
-
-
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

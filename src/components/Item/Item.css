@@ -95,10 +95,6 @@
     font-weight:700;
 }
 
-
-
-
-
 .product-name {
     font-size: 1.2rem;
     font-weight: 600;
@@ -121,7 +117,6 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    /* background-color: red; */
 }
 
 .section-priceReal{
@@ -161,10 +156,6 @@
     display: inline-block;
     margin-bottom: 0;
 }
-
-
-
-
 
 .detail-button {
     margin-top: 1rem;

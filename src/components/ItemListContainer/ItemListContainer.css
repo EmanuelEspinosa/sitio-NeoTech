@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* max-width: 1200px; */
   margin: auto;
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -22,8 +21,6 @@
   height: 100%;
   border-radius: 10px;
 }
-
-
 
 .sectionProducts .products-container {
   display: flex;

@@ -188,7 +188,6 @@ footer .iconos_redes {
     .footer-secciones .footer_section2 {
         justify-content: start;
         align-items: center;
-        /* padding-left: 2rem; */
     }
 
     .footer_section3 {
@@ -198,7 +197,6 @@ footer .iconos_redes {
         justify-content: center;
         gap: 1.2rem;
         padding-bottom: 2rem;
-        /* padding-left: 2rem; */
     }
 
     footer .derechos {

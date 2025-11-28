@@ -47,11 +47,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* background-color: green;
-    overflow: hidden;
-    position: relative; */
-
 }
 
 
@@ -78,7 +73,6 @@
     height: 50px;
 
     background-color: #1d1c1c00;
-    /* color: #FFF; */
     border: none;
     font-family: monospace;
     font-weight: bold;
@@ -117,7 +111,6 @@
     width: .8rem;
     height: .8rem;
     background-color: #FFF;
-
     border-radius: 20px;
     transition: 1s;
     cursor: pointer;
@@ -152,7 +145,6 @@
     }
 
     .dots {
-        /* display: none; */
         background-color: rgb(33, 37, 41);
         
     }

@@ -5,12 +5,7 @@ import { SliderContainer } from "../Slider/SliderContainer/SliderContainer";
 import "./MainLayout.css";
 
 export const MainLayout = () => {
-
     const location = useLocation();
-
-    
-
-
     return (
         <div className="main-container">
             <Header />
@@ -18,7 +13,6 @@ export const MainLayout = () => {
                 <Outlet />
             </div>
             <Footer />
-
         </div>
-    )
-}
+    );
+};

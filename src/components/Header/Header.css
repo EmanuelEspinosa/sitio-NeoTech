@@ -8,15 +8,11 @@ header {
     left: 0;
     right: 0;
     padding: .4% 7%;
-    /* margin-bottom: 1vw; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #E65012; */
     background-color: rgb(33, 37, 41);
     z-index: 1000;
-    /* margin-bottom: 1rem; */
-
 }
 
 header .logo_header {
@@ -67,7 +63,6 @@ header .navbar .nav-ul li a {
 }
 
 header .item-cart{
-    /* background-color: #00ffc6; */
     background-color: #00bfff;
     color: #000;
     padding: .9rem ;
@@ -117,7 +112,6 @@ header .iconMenuMovil{
         flex-direction: column;
         transition: left 0.3s ease;
         z-index: 999;
-        /* border-top: 2px solid #941802; */
     }
 
     .navbar.active {

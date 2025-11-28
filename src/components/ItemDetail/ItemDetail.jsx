@@ -38,12 +38,8 @@ export const ItemDetail = ({ detail }) => {
     };
 
     const handleModalConfirm = () => {
-
         const itemToAdd = { ...detail, quantity: selectedQuantity, price: newPrice };
         const result = addItem(itemToAdd);
-
-
-        // const result = addItem({ ...detail, quantity: selectedQuantity });
         setConfirmMessage(result.message);
         setTimeout(() => {
             setConfirmMessage("");
@@ -81,8 +77,6 @@ export const ItemDetail = ({ detail }) => {
                 <div className="btn-addCart">
                     <Count btnText={"Agregar al carrito"} onConfirm={handleConfirm} />
                 </div>
-
-                {/* <button className="btn-agregarCarrito" onClick={handleAddClick}>Agregar al carrito</button> */}
             </div>
 
             {/* MODAL DE CONFIRMACIÓN */}

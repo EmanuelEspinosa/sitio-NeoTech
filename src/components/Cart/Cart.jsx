@@ -158,7 +158,6 @@ export const Cart = () => {
 
             {showModal && modalType === "info" && (
                 <ConfirmModalCart
-                    // onCancel={handleCancel}
                     message={checkoutMessage}
                 />
             )}

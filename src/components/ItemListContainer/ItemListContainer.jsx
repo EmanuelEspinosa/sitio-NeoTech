@@ -39,33 +39,7 @@ export const ItemListContainer = () => {
             });
     }, [category]);
 
-
-    // useEffect(() => {
-    //     fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
-    //     fetch("/data/products.json")
-    //         .then((res) => {
-    //             if (!res.ok) {
-    //                 throw new Error("Hubo un problema al buscar productos");
-    //             }
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-
-    //             const categoriasUnicas = [...new Set(data.flatMap((prod) => prod.category))];
-    //             setCategorias(categoriasUnicas);
-
-
-    //             if (category) {
-    //                 setProductos(data.filter((prod) => prod.category === category));
-    //             } else {
-    //                 setProductos(data);
-    //             }
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-    // }, [category]);
-
+    
     return (
         <section id="products" className="sectionProducts" ref={listRef}>
             
