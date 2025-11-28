@@ -75,7 +75,7 @@ export const Home = () => {
                                         </div>
                                     </div>
 
-                                    <button onClick={() => navigate(`/detail/${p.id}`)}>Ver detalle</button>
+                                    <button onClick={() => navigate(`/products/detail/${p.id}`)}>Ver detalle</button>
                                 </div>
                             </div>
                         );
