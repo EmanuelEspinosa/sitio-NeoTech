@@ -14,6 +14,8 @@ import { RutaProtegida } from './components/RutaProtegida/RutaProtegida';
 import { Login } from './components/Login/Login';
 import { AdminDashboard } from './layout/AdminLayout/AdminDashboard/AdminDashboard';
 import { Home } from './components/Home/Home';
+import { AboutUs } from './layout/AboutUs/AboutUs';
+import { Contact } from './layout/Contact/Contact';
 
 
 function App() {
@@ -23,10 +25,12 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route element={<MainLayout />}>
-            <Route path='/' element={<Home />}/>
+            <Route path='/' element={<Home />} />
+            <Route path='/aboutUs' element={<AboutUs />} />
             <Route path='/products' element={<ItemListContainer />} />
             <Route path='/products/category/:category' element={<ItemListContainer />} />
             <Route path='/products/detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/cart' element={<Cart />} />
           </Route>
 

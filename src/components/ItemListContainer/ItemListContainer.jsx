@@ -40,16 +40,8 @@ export const ItemListContainer = () => {
     }, [category]);
 
 
-
-    useEffect(() => {
-        if (category || paginaActual > 1) {
-            listRef.current?.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [category, paginaActual]);
-
-
     // useEffect(() => {
-    //     // fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
+    //     fetch("https://691f471ebb52a1db22c124a1.mockapi.io/products")
     //     fetch("/data/products.json")
     //         .then((res) => {
     //             if (!res.ok) {
@@ -77,7 +69,9 @@ export const ItemListContainer = () => {
     return (
         <section id="products" className="sectionProducts" ref={listRef}>
             
-            <h1></h1>
+            <div className="banner-ProductList">
+                <img src="/images/banner-todosProductos.jpg"/>
+            </div>
             <FilterBar categorias={categoris} />
             <div className="products-container">
                 <div className="listproducts" >

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Count } from "../Count/Count";
 import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
 import { StarRating } from "../../layout/StarRating/StarRating";
+import { calculateDiscountPrice } from "../../utils/calculateDiscountPrice";
 
 export const ItemDetail = ({ detail }) => {
     const {
@@ -25,6 +26,7 @@ export const ItemDetail = ({ detail }) => {
     const [showModal, setShowModal] = useState(false);
     const [confirmMessage, setConfirmMessage] = useState("");
     const [selectedQuantity, setSelectedQuantity] = useState(0);
+    const { newPrice } = calculateDiscountPrice(price, category);
 
     const handleCancel = () => {
         setShowModal(false);
@@ -37,7 +39,7 @@ export const ItemDetail = ({ detail }) => {
 
     const handleModalConfirm = () => {
 
-        const itemToAdd = { ...detail, quantity: selectedQuantity };
+        const itemToAdd = { ...detail, quantity: selectedQuantity, price: newPrice };
         const result = addItem(itemToAdd);
 
 
@@ -49,6 +51,8 @@ export const ItemDetail = ({ detail }) => {
             setSelectedQuantity(0);
         }, 3000);
     };
+
+    
 
     return (
         <section className="item-detail">
@@ -63,7 +67,7 @@ export const ItemDetail = ({ detail }) => {
                 <h2>{name}</h2>
                 <StarRating rating={valoracion} />
 
-                <p className="item-detail__price">${price.toLocaleString("es-AR")}</p>
+                <p className="item-detail__price">${newPrice.toLocaleString("es-AR")}</p>
                 <p className="item-detail__feature">{feature}</p>
 
                 <ul className="item-detail__specs">

@@ -4,6 +4,7 @@ import { getProducts } from "../../services/products";
 import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
 import { fieldsByCategory } from "../../../public/data/fieldsByCategory";
+import { calculateDiscountPrice } from "../../utils/calculateDiscountPrice";
 
 const imagenesPorCategoria = {
     Celulares: "/images/imagenesCateg/celulares.jpg",
@@ -22,22 +23,13 @@ export const Home = () => {
     const navigate = useNavigate();
     const slides = [
         (
-            <div className="slider_content-item1">
-                <p>Hola</p>
-                {/* ...tu HTML del item 1... */}
-            </div>
+            <div className="item slider_content-item1"></div>
         ),
         (
-            <div className="slider_content-item2">
-                <p>Emanuel</p>
-                {/* ...tu HTML del item 2... */}
-            </div>
+            <div className="item slider_content-item2"></div>
         ),
         (
-            <div className="slider_content-item3">
-                <p>Roberto</p>
-                {/* ...tu HTML del item 3... */}
-            </div>
+            <div className="item slider_content-item3"></div>
         ),
     ];
 
@@ -61,19 +53,36 @@ export const Home = () => {
             <section className="productos-destacados">
                 <h2>Nuestos productos destacados</h2>
                 <div className="cards-destacados">
-                    {destacados.map(p => (
-                        <div key={p.id} className="card-destacado">
-                            <div className="img-cardDestacados">
-                                <img src={p.imageUrl} alt={p.name} />
-                            </div>
-                            <div className="content-cardDestacados">
-                                <h3>{p.name}</h3>
-                                <p>${p.price}</p>
-                                <button onClick={() => navigate(`/detail/${p.id}`)}>Ver detalle</button>
-                            </div>
+                    {destacados.map(p => {
+                        const { newPrice, descuento } = calculateDiscountPrice(p.price, p.category);
 
-                        </div>
-                    ))}
+                        return (
+                            <div key={p.id} className="card-destacado">
+                                <div className="img-cardDestacados">
+                                    <img src={p.imageUrl} alt={p.name} />
+                                </div>
+                                <div className="content-cardDestacados">
+                                    <h3>{p.name}</h3>
+
+                                    <div className="section-precio price-container">
+                                        <div className="section-priceReal price-sinDesc">
+                                            <div className="price-old">
+                                                ${p.price.toLocaleString()}
+                                            </div>
+                                            <div className="porcent-desc porcent-off">{descuento}% Off</div>
+                                        </div>
+                                        <div className="section-priceDesc section-salePrice">
+                                            <div className="sale-price">
+                                                ${newPrice.toLocaleString()}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button onClick={() => navigate(`/detail/${p.id}`)}>Ver detalle</button>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
 
                 <button className="btn-todosProduct-Home" onClick={() => navigate("/products")}>Ver todos los productos</button>
@@ -193,9 +202,9 @@ export const Home = () => {
                     <div className="sucursales-mapa">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.3489323787234!2d-58.4367664849357!3d-34.617003980454915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb6f7e4c84a3%3A0xfed3ea3aa34625f4!2sAv.%20Rivadavia%204500%2C%20C1407%20CABA!5e0!3m2!1ses!2sar!4v1694303889022!5m2!1ses!2sar"
-                            
 
-                            style={{ border: 0 }}
+
+
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

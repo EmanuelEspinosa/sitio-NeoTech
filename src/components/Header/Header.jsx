@@ -23,10 +23,38 @@ export const Header = () => {
                 <div className="navegation-header">
                     <nav className={menuMovil ? "navbar active" : "navbar"}>
                         <ul className="nav-ul">
-                            <li><Link className="nav-item" to={"/"}>Home</Link></li>
-                            <li><Link className="nav-item" to={"/sobreNosotros"}>Sobre Nosotros</Link></li>
-                            <li><Link className="nav-item" to={"/products"}>Productos</Link></li>
-                            <li><Link className="nav-item" to={"/contact"}>Contacto</Link></li>
+                            <li>
+                                <Link
+                                    className="nav-item"
+                                    to={"/"}
+                                    onClick={menuMovil ? () => SetMenuMovil(!menuMovil) : ""}>
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="nav-item"
+                                    to={"/aboutUs"}
+                                    onClick={menuMovil ? () => SetMenuMovil(!menuMovil) : ""}>
+                                    Sobre Nosotros
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="nav-item"
+                                    to={"/products"}
+                                    onClick={menuMovil ? () => SetMenuMovil(!menuMovil) : ""}>
+                                    Productos
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="nav-item"
+                                    to={"/contact"}
+                                    onClick={menuMovil ? () => SetMenuMovil(!menuMovil) : ""}>
+                                    Contacto
+                                </Link>
+                            </li>
 
                         </ul>
                     </nav>

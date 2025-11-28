@@ -1,71 +1,23 @@
-/* .productos-destacados {
-  background: #f5f7fa;
-  padding: 2rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  
-}
-
-.card-destacado {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 2rem;
-  text-align: center;
-  background-color: #1b1b2b;
-}
-
-.img-cardDestacados{
-    background-color: #1b1b2b;
-}
-
-.img-cardDestacados > img {
-  max-width: 100%;
-  height: 180px;
-  object-fit: contain;
-}
-
-.card-destacado h3 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-
-.card-destacado p {
-  color: #00c853; 
-  font-weight: bold;
-}
-
-.card-destacado button {
-  margin-top: 0.5rem;
-  background: #1976d2; 
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.card-destacado button:hover {
-  background: #2196f3;
-} */
-
 .container-page {
-    background-image: url("/images/fondo-6.jpg");
-    background-size: cover;
+    background-color: #EEE;
     padding-bottom: 4rem;
+    padding-top: 1rem;
 }
 
+.slider_content-item1 img {
+  width: 200%;        
+  height: 100%;       
+  object-fit: cover;  
+  display: block;     
+  border-radius: 8px; 
+}
 
 
 
 .productos-destacados {
     padding: 1.5rem;
     background-image: url("/images/fondo-1.jpg");
-    margin: 1.2rem;
+    margin: 2rem 1.2rem 0 1.2rem;
     border-radius: 15px;
     border: 1px solid #777;
 }
@@ -74,7 +26,7 @@
     margin-bottom: 1.5rem;
     color: #1b1b2b;
     text-align: start;
-    text-shadow: 2px 3px 8px #494975;
+    /* text-shadow: 2px 3px 8px #494975; */
     font-size: 1.7rem;
 }
 
@@ -125,8 +77,7 @@
 }
 
 .card-destacado h3 {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
+    font-size: 1.07rem;
     color: #fff;
 }
 
@@ -134,6 +85,30 @@
     color: #fff;
     font-weight: bold;
 }
+
+.price-container{
+    width: 100%;
+}
+.price-sinDesc{
+    justify-content: center;
+}
+.porcent-off{
+    color: #FFF;
+    padding: .3rem;
+}
+
+.section-precio .section-salePrice{
+    margin-top: 0;
+    margin-bottom: .3rem;
+
+}
+
+.sale-price{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 
 .card-destacado button {
     margin-top: 0.5rem;
@@ -172,11 +147,11 @@
 }
 
 
-/*   SECCION CATEGORIAS    */
+/* SECCION CATEGORIAS     */
 
 .categorias-destacadas {
     padding: 2rem;
-    /* background-color: #232336; */
+    
 }
 
 .categorias-destacadas>h2 {
@@ -186,7 +161,7 @@
 
 .categoria-cards {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -200,6 +175,7 @@
     text-align: center;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
     transition: transform 0.2s ease;
+    gap: .8rem;
 }
 
 .categoria-card:hover {
@@ -226,6 +202,7 @@
 .categoria-card h3 {
     color: #000;
     margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .categoria-card button {
@@ -250,7 +227,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
     border-radius: 10px;
 
 }
@@ -270,7 +247,8 @@
     flex-direction: column;
     padding: 1rem 1rem 0rem 1rem;
     border-radius: 15px;
-    outline: 2px solid #FFF;
+    /* outline: 2px solid #FFF; */
+    outline: 2px solid #00bfff;
 }
 
 .section1-promo>div {
@@ -367,7 +345,6 @@
 .sucursales-mapa iframe {
     width: 100%;
     height: 100%;
-    /* toma la altura del contenedor */
     display: block;
 }
 
@@ -394,58 +371,6 @@
 
 
 
-/* .nuestras-sucursales>p {
-    font-size: 1.1rem;
-    margin-bottom: .5rem;
-}
-
-
-
-.sucursales-container {
-    display: flex;
-    gap: 2rem;
-    padding: 0 1.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.sucursal-lista {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: #1b1b2b;
-    padding: 1rem;
-    border-radius: 10px;
-    color: #FFF;
-}
-
-.sucursal-lista>h4 {
-    font-size: 1.1rem;
-}
-
-
-.sucursal>h4 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.sucursal p {
-    margin: 0.3rem 0 0;
-    font-size: 1rem;
-    color: #BBB;
-}
-
-.sucursales-mapa {
-    flex: 2;
-    height: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-    margin-left: 1.5rem;
-} */
-
-
 @media (max-width: 900px) {
 
     .banner-promos {
@@ -455,12 +380,15 @@
     .banner-card-promo {
         gap: 0rem;
         align-items: end;
+        padding: .3rem 1rem 1rem 1rem;
+        border-radius: 10px;
     }
 
 
     .section1-promo {
         flex: 1.7;
-        gap: 1rem;
+        gap: .3rem;
+        outline: solid 1px #00bfff;
     }
 
     .section1-promo>div>h3>span {
@@ -470,6 +398,8 @@
     .sucursales-container {
         flex-direction: column;
         align-items: stretch;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .container-lista {

@@ -74,7 +74,6 @@ export const SliderContainer = ({ slides }) => {
                 <div
                     // ref para medir offsetLeft de cada item (fiel a tu HTML/JS)
                     ref={el => (itemRefs.current[i] = el)}
-                    className="item"
                     key={i}
                 >
                     {slide}

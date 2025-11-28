@@ -81,7 +81,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
     const onNextPage = () => {
         if (paginaActual < totalPages) {
             setPaginaActual(paginaActual + 1);
-            // window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }
     };
 

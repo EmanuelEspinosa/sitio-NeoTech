@@ -15,16 +15,18 @@ export const FilterBar = ({categorias}) => {
         if (cat === "Todas") {
             navigate("/products");
             toggleDesplegado();
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         } else {
             navigate(`/products/category/${cat}`);
             toggleDesplegado();
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }
     };
 
     return (
         <div className="filter-bar">
             <button className="toggle-button" onClick={toggleDesplegado}>
-                Filtros {desplegado ? <FaChevronUp /> : <FaChevronDown />}
+                Categorías {desplegado ? <FaChevronUp /> : <FaChevronDown />}
             </button>
 
             {desplegado && (

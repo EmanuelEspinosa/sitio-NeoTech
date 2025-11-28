@@ -15,7 +15,7 @@ header {
     /* background-color: #E65012; */
     background-color: rgb(33, 37, 41);
     z-index: 1000;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 
 }
 
@@ -103,7 +103,7 @@ header .iconMenuMovil{
 
 
 
-@media (max-width: 550px){
+@media (max-width: 768px){
     header .iconMenuMovil{
         display: flex;
     }
