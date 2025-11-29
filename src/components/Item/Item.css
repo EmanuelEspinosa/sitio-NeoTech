@@ -3,7 +3,7 @@
     min-height: 34rem;
     background: radial-gradient(circle at top left, #1e1e2f, #12121a);
     border-radius: 20px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4); */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #f0f0f0;
@@ -15,7 +15,7 @@
 
 .cardProduct:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); */
 }
 
 .product-img {
