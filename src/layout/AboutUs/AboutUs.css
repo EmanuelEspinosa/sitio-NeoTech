@@ -1,4 +1,144 @@
-.aboutUs-container{
-    margin-top: 2rem;
-    height: 900px;
+.title-aboutUs {
+    border-bottom: 3px solid #00bfff;
+    width: 95%;
+    margin: auto;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}
+
+.aboutUs-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    /* separación entre secciones */
+}
+
+.aboutUs-container>section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item {
+    padding: 1rem;
+}
+
+.imagen>img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.texto>h2 {
+    text-align: start;
+    margin-bottom: 1rem;
+    background-color: #1e1e2f;
+    padding: .4rem;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border-left: 4px solid #00bfff;
+}
+
+.texto>p {
+    text-align: start;
+
+}
+
+.texto .parrafo-valores {
+    margin-bottom: 1rem;
+}
+
+
+.aboutUs-Servis{
+    width: 95%;
+    margin: auto;
+    padding-bottom: 7rem;
+    background-image: url("/images/fondo-1.jpg");
+    padding: 1.2rem;
+    border-radius: 10px;
+    outline: 2px solid #999;
+    margin-bottom: 5rem;
+}
+
+.aboutUs-Servis > h2{
+    text-align: start;
+    margin-bottom: 1.5rem;
+}
+
+.aboutUs-Servis-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+
+}
+
+.aboutUs-servis-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1e1e2f;
+    padding: 1rem;
+    width: 25%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.aboutUs-servis-section:hover{
+    transform: translateY(-5px);
+    transition: .5s;
+}
+
+.aboutUs-servis-section .img-servis{
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+}
+
+.aboutUs-servis-section .img-servis > img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutUs-servis-section > h4{
+    color: #00bfff;
+    margin-bottom: 1rem;
+}
+
+.aboutUs-servis-section > p{
+    color: #fff;
+    text-align: start;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aboutUs-container section {
+        grid-template-columns: 1fr;
+        /* una sola columna */
+    }
+
+    /* Imagen siempre primero */
+    .item.imagen {
+        order: -1;
+    }
+
+    .aboutUs-Servis-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutUs-servis-section{
+        width: 80%;
+    }
 }

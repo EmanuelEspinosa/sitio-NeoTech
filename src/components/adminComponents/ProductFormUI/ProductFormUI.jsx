@@ -120,13 +120,12 @@ export const ProductFormUI = ({
                     </div>
 
                     <div className="form-actions">
+                        <button type="button" className="btn btn-secondary" onClick={onReset}>
+                            Limpiar
+                        </button>
 
                         <button className="btn btn-primary" type="submit" disabled={loading}>
                             {loading ? "Guardando..." : "Guardar"}
-                        </button>
-
-                        <button type="button" className="btn btn-secondary" onClick={onReset}>
-                            Limpiar
                         </button>
                     </div>
                 </form>
