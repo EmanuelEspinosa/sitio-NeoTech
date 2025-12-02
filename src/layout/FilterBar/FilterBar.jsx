@@ -3,12 +3,12 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./FilterBar.css"
 import { useState } from "react";
 
-export const FilterBar = ({categorias}) => {
+export const FilterBar = ({ categorias, setPageActual, search, setSearch }) => {
 
     const [desplegado, setDesplegado] = useState(false);
     const navigate = useNavigate();
     const { category } = useParams();
-    
+
     const toggleDesplegado = () => setDesplegado(!desplegado);
 
     const handleClick = (cat) => {
@@ -25,9 +25,23 @@ export const FilterBar = ({categorias}) => {
 
     return (
         <div className="filter-bar">
-            <button className="toggle-button" onClick={toggleDesplegado}>
-                Categorías {desplegado ? <FaChevronUp /> : <FaChevronDown />}
-            </button>
+            <div className="filters-category-search">
+                <button className="toggle-button" onClick={toggleDesplegado}>
+                    Categorías {desplegado ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+
+                <input
+                    className="search-bar"
+                    type="text"
+                    placeholder="Buscar productos..."
+                    value={search}
+                    onChange={(e) => {
+                        setPageActual(1);
+                        setSearch(e.target.value);
+                    }}
+                />
+            </div>
+
 
             {desplegado && (
                 <div className="filter-tags">

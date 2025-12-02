@@ -13,14 +13,21 @@ export const AboutUs = () => {
 
                     <div className="item texto">
                         <h2>Tecnología pensada para acompañarte</h2>
-                        <p><b>
+                        <p className="parrafo-valores">
                             En NeoTech no solo ofrecemos productos tecnológicos: buscamos que cada
                             persona pueda acceder a ellos de manera simple y confiable.
                             Creemos que el futuro se construye con herramientas al alcance
                             de todos, por eso trabajamos con calidad, precios transparentes
                             y un servicio cercano que genera confianza. La tecnología no es
                             un privilegio, es una oportunidad para crecer, aprender y
-                            disfrutar.</b>
+                            disfrutar.
+                        </p>
+                        <h2>Un futuro al alcance de tu mano</h2>
+                        <p>
+                            La tecnología abre caminos hacia la creatividad, el aprendizaje y la 
+                            conexión. En NeoTech queremos que cada persona descubra nuevas 
+                            posibilidades y se anime a transformar su día a día con 
+                            herramientas que inspiran y potencian.
                         </p>
                     </div>
                 </section>
@@ -28,21 +35,21 @@ export const AboutUs = () => {
                 <section>
                     <div className="item texto">
                         <h2>Nuestra misión: acercar innovación con propósito</h2>
-                        <p className="parrafo-valores"><b>
+                        <p className="parrafo-valores">
                             En NeoTech trabajamos para que la tecnología se convierta en
                             una aliada cotidiana, capaz de simplificar tareas,
                             inspirar creatividad y abrir nuevas oportunidades.
                             Queremos que cada persona encuentre en nuestros productos
                             no solo calidad y accesibilidad, sino también un camino
-                            hacia un futuro más conectado y humano.</b>
+                            hacia un futuro más conectado y humano.
                         </p>
                         <h2>Cercanía, confianza y transparencia</h2>
-                        <p><b>
+                        <p>
                             Nos mueve la idea de construir relaciones duraderas con nuestros
                             clientes. Valoramos la honestidad en cada interacción,
                             la claridad en cada compra y la cercanía de un servicio que
                             escucha y responde. Porque más allá de vender tecnología,
-                            buscamos generar confianza.</b>
+                            buscamos generar confianza.
                         </p>
                     </div>
 
@@ -58,20 +65,20 @@ export const AboutUs = () => {
 
                     <div className="item texto">
                         <h2>Compromiso con el cliente</h2>
-                        <p className="parrafo-valores"><b>
+                        <p className="parrafo-valores">
                             Cada producto que ofrecemos está pensado para que disfrutes
                             de tranquilidad y seguridad. Nos comprometemos a acompañarte
                             antes, durante y después de tu compra, brindando asesoramiento
                             y soporte personalizado. Queremos que tu experiencia sea
-                            simple, clara y satisfactoria.</b>
+                            simple, clara y satisfactoria.
                         </p>
                         <h2>Innovación para crecer juntos</h2>
-                        <p><b>
+                        <p>
                             Miramos hacia adelante con la convicción de que la tecnología
                             es una oportunidad para aprender, crear y transformar.
                             En NeoTech trabajamos día a día para ofrecerte soluciones
                             modernas que te conecten con el futuro, sin perder la esencia
-                            de un trato humano y cercano.</b>
+                            de un trato humano y cercano.
                         </p>
                     </div>
                 </section>
