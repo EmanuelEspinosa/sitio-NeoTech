@@ -1,5 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./FilterBar.css"
 import { useState } from "react";
 
@@ -30,16 +32,18 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch }) => {
                     Categorías {desplegado ? <FaChevronUp /> : <FaChevronDown />}
                 </button>
 
-                <input
-                    className="search-bar"
-                    type="text"
-                    placeholder="Buscar productos..."
-                    value={search}
-                    onChange={(e) => {
-                        setPageActual(1);
-                        setSearch(e.target.value);
-                    }}
-                />
+                <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Buscar productos..."
+                        value={search}
+                        onChange={(e) => {
+                            setPageActual(1);
+                            setSearch(e.target.value);
+                        }}
+                    />
+                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                </div>
             </div>
 
 

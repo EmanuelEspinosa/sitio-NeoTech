@@ -5,17 +5,32 @@
     margin: auto;
 }
 
-.filters-category-search{
+.filters-category-search {
     display: flex;
     gap: 1rem;
 }
 
-.filters-category-search .search-bar{
-    background-color: #eee;
-    color: #000;
+.search-bar {
     padding: 0.6rem 2rem;
-    border: 2px solid #2a2a3d;
     border-radius: 30px;
+    background-color: #2a2a3d;
+    color: #fff;
+    border: none;
+}
+
+.search-bar>input {
+    background-color: #2a2a3d;
+    color: #EEE;
+    border: none;
+    font-size: .9rem;
+}
+
+.search-bar>input:focus {
+    outline: none;
+}
+
+.search-bar>input::placeholder {
+    color: #EEE;
     font-size: .9rem;
 }
 
@@ -70,12 +85,59 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 768px){
-    .filters-category-search{
+@media (max-width: 768px) {
+    .filters-category-search {
         gap: .4rem;
         justify-content: space-evenly;
     }
-    .filters-category-search .search-bar{
-        padding: .6rem 0rem .6rem .4rem;
+
+    /* .filters-category-search .search-bar {
+        padding: .6rem .4rem .6rem .4rem;
+        width: 48%;
+        background-color: #eee;
+        color: #000;
+        border: 2px solid #2a2a3d;
+        border-radius: 30px;
+        font-size: .9rem;
+    } */
+
+    .search-bar {
+        padding: 0 .2rem 0 .2rem;
+        border-radius: 30px;
+        background-color: #2a2a3d;
+        color: #fff;
+        border: none;
+        width: 48%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-bar>input {
+        background-color: #2a2a3d;
+        color: #EEE;
+        border: none;
+        font-size: .9rem;
+        width: 80%;
+    }
+
+    .search-bar>input::placeholder {
+        color: #EEE;
+        font-size: .9rem;
+    }
+
+    .toggle-button {
+        background-color: #eee;
+        color: #000;
+        padding: 0.6rem 2rem;
+        border: 2px solid #2a2a3d;
+        border-radius: 30px;
+        font-size: .9rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: flex-start;
+        gap: .5rem;
     }
 }
