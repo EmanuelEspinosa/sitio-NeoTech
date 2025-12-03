@@ -5,8 +5,8 @@ export const fieldsByCategory = {
   Smartwatch: ["Conectividad", "Pantalla", "Resistente al agua", "Capacidad batería", "Con GPS", "Con Bluetooth"],
   Notebook: ["Almacenamiento", "Sistema Operativo", "RAM", "Pantalla", "Procesador"],
   Tablets: ["Almacenamiento", "Camara Frontal", "Camara Posterior", "Sistema Operativo", "RAM", "Pantalla"],
+  PC: ["Almacenamiento", "Sistema Operativo", "RAM", "Procesador"],
   Monitores: ["Tamaño Pantalla", "Tipo Pantalla", "Resolución", "Brillo (Típico)", "Conectividad", "Parlantes"],
   SillonGamer: ["Altura máxima", "Altura mínima", "Ancho silla", "Ergonómica", "Giratoria", "Soporte lumbar"],
-  Proyectores: ["Resolución", "Parlantes", "Fuentes de luz", "Control remoto", " Bluetooth", "Conexiones"],
-  PC: ["Almacenamiento", "Sistema Operativo", "RAM", "Procesador"] 
+  Proyectores: ["Resolución", "Parlantes", "Fuentes de luz", "Control remoto", " Bluetooth", "Conexiones"]
 };

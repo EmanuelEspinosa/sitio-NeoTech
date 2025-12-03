@@ -12,6 +12,8 @@ export const ItemListContainer = () => {
     const [categoris, setCategorias] = useState([]);
     const [paginaActual, setPaginaActual] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
+    const [sortOrder, setSortOrder] = useState("sin_filtrar"); // "sin_filtrar" | "asc" | "desc"
+
     const { category } = useParams();
     const listRef = useRef();
 
@@ -34,11 +36,18 @@ export const ItemListContainer = () => {
             });
     }, [category]);
 
-    const filteredProducts = searchTerm === "" ? products : products.filter((p) =>
+    let filteredProducts = searchTerm === "" ? products : products.filter((p) =>
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.brand.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    if (sortOrder === "asc") {
+        filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+    } else if (sortOrder === "desc") {
+        filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price);
+    }
+
 
     const productosPorPagina = 6;
     const indiceInicial = (paginaActual - 1) * productosPorPagina;
@@ -52,35 +61,28 @@ export const ItemListContainer = () => {
             <div className="banner-ProductList">
                 <img src="/images/banner-todosProductos.jpg" />
             </div>
-            {/* <div className="search-bar">
-                <input
-                    type="text"
-                    placeholder="Buscar productos..."
-                    value={searchTerm}
-                    onChange={(e) => {
-                        setPaginaActual(1); 
-                        setSearchTerm(e.target.value);
-                    }}
-                />
-            </div> */}
 
-            <FilterBar
-                categorias={categoris}
-                setPageActual={setPaginaActual}
-                search={searchTerm}
-                setSearch={setSearchTerm}
-            />
-            <div className="products-container">
-                <div className="listproducts" >
-                    <ItemList list={productosVisibles} />
+            <div className="list-container">
+                <FilterBar
+                    categorias={categoris}
+                    setPageActual={setPaginaActual}
+                    search={searchTerm}
+                    setSearch={setSearchTerm}
+                    sortOrder={sortOrder}
+                    setSortOrder={setSortOrder}
+                />
+                <div className="products-container">
+                    <div className="listproducts" >
+                        <ItemList list={productosVisibles} />
+                    </div>
+
+                    <Pagination
+                        products={filteredProducts}
+                        paginaActual={paginaActual}
+                        setPaginaActual={setPaginaActual}
+                        productosPorPagina={productosPorPagina}
+                    />
                 </div>
-
-                <Pagination
-                    products={filteredProducts}
-                    paginaActual={paginaActual}
-                    setPaginaActual={setPaginaActual}
-                    productosPorPagina={productosPorPagina}
-                />
             </div>
         </section>
     );

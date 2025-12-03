@@ -1,7 +1,7 @@
 .sectionProducts {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: auto;
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -13,13 +13,25 @@
   height: 95%;
   margin: auto;
   overflow: hidden;
-  
 }
 
 .banner-ProductList > img{
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+
+.list-container{
+  background-image: url("/images/fondo-1.jpg");
+  width: 95%;
+  margin: auto;
+  padding-top: 2rem;
+  border-radius: 10px;
+  border: 2px solid #bbb;
+}
+
+.products-container{
+  margin-top: 2rem;
 }
 
 .sectionProducts .products-container {
