@@ -5,17 +5,15 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./FilterBar.css"
 import { useState } from "react";
 
-export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSortOrder, sortOrder }) => {
+export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSortOrder, sortOrder, products }) => {
 
     const [showFilters, setShowFilters] = useState(false);
     const [showCategories, setShowCategories] = useState(false);
     const [showPrice, setShowPrices] = useState(false);
 
-    // const [desplegado, setDesplegado] = useState(false);
     const navigate = useNavigate();
     const { category } = useParams();
 
-    // const toggleDesplegado = () => setDesplegado(!desplegado);
     const toggleFilters = () => setShowFilters(!showFilters);
     const toggleCategories = () => setShowCategories(!showCategories);
     const togglePrice = () => setShowPrices(!showPrice);
@@ -23,12 +21,8 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
     const handleClick = (cat) => {
         if (cat === "Todas") {
             navigate("/products");
-            // toggleDesplegado();
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         } else {
             navigate(`/products/category/${cat}`);
-            // toggleDesplegado();
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }
         setPageActual(1);
     };
@@ -37,22 +31,36 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
         <div className="filter-bar">
             {/* Botón principal */}
             <div className="filters-search">
-                <button className="toggle-btnFilters" onClick={toggleFilters}>
-                    Filtros {showFilters ? <FaChevronUp /> : <FaChevronDown />}
-                </button>
+                <div className="filter-options">
+                    <button className="toggle-btnFilters" onClick={toggleFilters}>
+                        Filtros {showFilters ? <FaChevronUp /> : <FaChevronDown />}
+                    </button>
 
-                {/* Barra de búsqueda siempre visible */}
-                <div className="search-bar">
-                    <input
-                        type="text"
-                        placeholder="Buscar productos..."
-                        value={search}
-                        onChange={(e) => {
-                            setPageActual(1);
-                            setSearch(e.target.value);
-                        }}
-                    />
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                    {/* Barra de búsqueda siempre visible */}
+                    <div className="search-bar">
+                        <input
+                            type="text"
+                            placeholder="Buscar productos..."
+                            value={search}
+                            onChange={(e) => {
+                                setPageActual(1);
+                                setSearch(e.target.value);
+                            }}
+                        />
+                        <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                    </div>
+                </div>
+
+                <div className="results-container">
+                    <div className="results-count">
+                        {category ?
+                            <p>
+                                <strong>{products.length} {products.length > 1 ? "resultados" : "resultado"} </strong>
+                                para {category}
+                            </p> :
+                            <p>Mostrando <strong>{products.length} resultados</strong></p>
+                        }
+                    </div>
                 </div>
             </div>
 
@@ -69,7 +77,10 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
                             <div className="filter-tags">
                                 <button
                                     className={!category ? "active" : ""}
-                                    onClick={() => handleClick("Todas")}
+                                    onClick={() => {
+                                        handleClick("Todas");
+                                        setShowFilters(!showFilters);
+                                    }}
                                 >
                                     Todas
                                 </button>
@@ -77,7 +88,10 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
                                     <button
                                         key={cat}
                                         className={category === cat ? "active" : ""}
-                                        onClick={() => handleClick(cat)}
+                                        onClick={() => {
+                                            handleClick(cat);
+                                            setShowFilters(!showFilters);
+                                        }}
                                     >
                                         {cat}
                                     </button>
@@ -89,27 +103,39 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
                     {/* Sección Por precio */}
                     <div className="filter-section">
                         <button className="toggle-btnPrice" onClick={togglePrice}>
-                            Por precio {showPrice ? <FaChevronUp /> : <FaChevronDown />}
+                            Ordenar por {showPrice ? <FaChevronUp /> : <FaChevronDown />}
                         </button>
                         {showPrice && (
                             <div className="filter-tags">
                                 <button
                                     className={sortOrder === "sin_filtrar" ? "active" : ""}
-                                    onClick={() => { setPageActual(1); setSortOrder("sin_filtrar"); }}
+                                    onClick={() => {
+                                        setPageActual(1);
+                                        setSortOrder("sin_filtrar");
+                                        setShowFilters(!showFilters);
+                                    }}
                                 >
                                     Sin filtrar
                                 </button>
                                 <button
                                     className={sortOrder === "desc" ? "active" : ""}
-                                    onClick={() => { setPageActual(1); setSortOrder("desc"); }}
+                                    onClick={() => {
+                                        setPageActual(1);
+                                        setSortOrder("desc");
+                                        setShowFilters(!showFilters);
+                                    }}
                                 >
-                                    Descendente
+                                    Mayor Precio
                                 </button>
                                 <button
                                     className={sortOrder === "asc" ? "active" : ""}
-                                    onClick={() => { setPageActual(1); setSortOrder("asc"); }}
+                                    onClick={() => {
+                                        setPageActual(1);
+                                        setSortOrder("asc");
+                                        setShowFilters(!showFilters);
+                                    }}
                                 >
-                                    Ascendente
+                                    Menor Precio
                                 </button>
                             </div>
                         )}
@@ -117,6 +143,5 @@ export const FilterBar = ({ categorias, setPageActual, search, setSearch, setSor
                 </div>
             )}
         </div>
-
     )
 };

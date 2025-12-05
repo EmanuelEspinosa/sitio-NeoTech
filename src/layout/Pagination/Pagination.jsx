@@ -16,20 +16,32 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
     const onPreviusPage = () => {
         if (paginaActual > 1) {
             setPaginaActual(paginaActual - 1);
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            if (!isMobile) {
+                window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
+            } else {
+                window.scrollTo({ top: 300, left: 0, behavior: "smooth" });
+            }
         }
     };
 
     const onNextPage = () => {
         if (paginaActual < totalPages) {
             setPaginaActual(paginaActual + 1);
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            if (!isMobile) {
+                window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
+            } else {
+                window.scrollTo({ top: 300, left: 0, behavior: "smooth" });
+            }
         }
     };
 
     const pageActualSet = (page) => {
         setPaginaActual(page);
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        if (!isMobile) {
+            window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
+        } else {
+            window.scrollTo({ top: 300, left: 0, behavior: "smooth" });
+        }
     };
 
 

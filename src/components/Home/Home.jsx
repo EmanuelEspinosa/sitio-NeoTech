@@ -5,6 +5,7 @@ import "./Home.css";
 import { Link, useNavigate } from "react-router-dom";
 import { fieldsByCategory } from "../../../public/data/fieldsByCategory";
 import { calculateDiscountPrice } from "../../utils/calculateDiscountPrice";
+import { ConfirmModalCart } from "../../layout/confirmModalCart/ConfirmModalCart";
 
 const imagenesPorCategoria = {
     Celulares: "/images/imagenesCateg/celulares.jpg",
@@ -20,6 +21,8 @@ const imagenesPorCategoria = {
 
 export const Home = () => {
     const [destacados, setDestacados] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [email, setEmail] = useState("");
     const navigate = useNavigate();
     const slides = [
         (
@@ -41,8 +44,15 @@ export const Home = () => {
             })
     }, []);
 
-
     const categorias = Object.keys(imagenesPorCategoria);
+
+    const handleSubscribe = () => {
+        setShowModal(true);
+        setTimeout(() => {
+            setShowModal(false);
+            setEmail("");
+        }, 3000);
+    }
 
     return (
         <div className="container-page">
@@ -206,7 +216,40 @@ export const Home = () => {
                     </div>
                 </div>
             </section >
+
+            <section className="section-newsletter">
+                <h2>Conéctese con lo mejor del momento</h2>
+                <p>Únase a nuestro newsletter y disfrute de descuentos exclusivos,
+                    lanzamientos destacados y recomendaciones que marcan tendencia.
+                    Sea parte de nuestra comunidad y manténgase siempre al día.
+                </p>
+                <div className="input-newsletter">
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        handleSubscribe();
+                    }}>
+                        <input
+                            type="email"
+                            placeholder="Ingrese su email..."
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="input-email"
+                            required
+                        />
+                        <button type="submit" className="btn-newsletter">Suscribirse</button>
+                    </form>
+                </div>
+            </section>
+
+            {showModal && (
+                <ConfirmModalCart
+                    message={`Email ${email} suscripto a nuestro newsletter`}
+                />
+            )}
         </div >
+
+
+
 
     )
 }
