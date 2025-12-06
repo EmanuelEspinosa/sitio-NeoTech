@@ -148,6 +148,42 @@ export const Cart = () => {
                 </div>
             )}
 
+            <div className="medios-pago">
+                <h3>Medios de pago</h3>
+                <div className="cont-mediosDePago">
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/AmericanExpress.png" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/Visa.jpg" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/MasterCard.jpg" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/Cabal.png" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/NaranjaX.jpg" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/MercadoPago.png" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/efectivo.png" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/Modo.png" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/rapipago.jpg" alt="" />
+                    </div>
+                    <div className="card-medioDePago">
+                        <img src="./images/MediosPago/pago-facil.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+
             {showModal && modalType === "checkout" && (
                 <ConfirmModalCart
                     onConfirm={handleCheckoutConfirm}

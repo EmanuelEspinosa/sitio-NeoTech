@@ -230,6 +230,49 @@
 }
 
 
+
+
+
+
+
+.medios-pago{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.medios-pago > h3{
+    width: 100%;
+    margin: .5rem auto;
+    font-size: 1rem;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid #fff;
+    text-align: start;
+    color: #FFF;
+
+}
+
+.cont-mediosDePago{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    gap: .3rem;
+}
+
+.cont-mediosDePago .card-medioDePago{
+    flex: 1;
+
+}
+
+.card-medioDePago img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;

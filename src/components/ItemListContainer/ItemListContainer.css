@@ -12,41 +12,42 @@
   border-radius: 10px;
 }
 
-.sectionProducts-banner{
+.sectionProducts-banner {
   width: 80%;
   margin: auto;
   display: flex;
   gap: 1.2rem;
 }
 
-.products-banner1, .products-banner2{
+.products-banner1,
+.products-banner2 {
   flex: 1;
   transition: .5s;
 }
 
-.products-banner1:hover{
+.products-banner1:hover {
   transition: .5s;
   transform: scale(1.05);
 }
 
-.products-banner2:hover{
+.products-banner2:hover {
   transition: .5s;
   transform: scale(1.05);
 }
 
-.products-banner1 > img{
+.products-banner1>img {
   width: 100%;
 
   border-radius: 10px;
-  
+
 }
 
-.products-banner2 > img{
+.products-banner2>img {
   width: 100%;
   border-radius: 10px;
 }
 
-.list-container{
+.list-container {
   background-image: url("/images/fondo-1.jpg");
   width: 95%;
   margin: auto;
@@ -55,21 +56,21 @@
   border: 2px solid #bbb;
 }
 
-.breadcrumb{
+.breadcrumb {
   width: 89%;
   margin: auto;
   margin-bottom: 1rem;
 }
 
-.breadcrumb > p{
+.breadcrumb>p {
   text-align: start;
 }
 
-.breadcrumb-link{
+.breadcrumb-link {
   color: #000;
 }
 
-.products-container{
+.products-container {
   margin-top: 2rem;
 
 }
@@ -89,7 +90,7 @@
   justify-content: center;
 }
 
-.results-count{
+.results-count {
   text-align: start;
   width: 89%;
   margin: auto;
@@ -98,13 +99,18 @@
 
 }
 
-@media (max-width: 768px){
-  .breadcrumb > p{
+@media (max-width: 768px) {
+  .sectionProducts {
+    width: 100%;
+
+  }
+
+  .breadcrumb>p {
     width: 89%;
     margin: auto;
   }
 
-  .products-banner2{
+  .products-banner2 {
     display: none;
   }
 }
