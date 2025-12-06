@@ -474,6 +474,7 @@
 
     .input-newsletter .input-email {
         font-size: .9rem;
+        width: 30%;
     }
 
     .section-newsletter>p {
