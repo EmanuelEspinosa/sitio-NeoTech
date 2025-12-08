@@ -19,7 +19,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
             if (!isMobile) {
                 window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
             } else {
-                window.scrollTo({ top: 285, left: 0, behavior: "smooth" });
+                window.scrollTo({ top: 270, left: 0, behavior: "smooth" });
             }
         }
     };
@@ -30,7 +30,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
             if (!isMobile) {
                 window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
             } else {
-                window.scrollTo({ top: 285, left: 0, behavior: "smooth" });
+                window.scrollTo({ top: 270, left: 0, behavior: "smooth" });
             }
         }
     };
@@ -40,7 +40,7 @@ export const Pagination = ({ products, paginaActual, setPaginaActual, productosP
         if (!isMobile) {
             window.scrollTo({ top: 380, left: 0, behavior: "smooth" });
         } else {
-            window.scrollTo({ top: 285, left: 0, behavior: "smooth" });
+            window.scrollTo({ top: 270, left: 0, behavior: "smooth" });
         }
     };
 

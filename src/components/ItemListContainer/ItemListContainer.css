@@ -53,7 +53,8 @@
   margin: auto;
   padding-top: 2rem;
   border-radius: 10px;
-  border: 2px solid #bbb;
+  /* border: 2px solid #bbb; */
+  outline: 2px solid #00bfff;
 }
 
 .breadcrumb {
@@ -102,13 +103,39 @@
 @media (max-width: 768px) {
   .sectionProducts {
     width: 100%;
+    margin-top: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 1rem;
+  }
 
+  .list-container{
+    width: 98%;
+    margin-top: .5rem;
   }
 
   .breadcrumb>p {
     width: 89%;
     margin: auto;
   }
+
+  .sectionProducts-banner{
+    width: 90%;
+  }
+
+  .products-banner1{
+    box-shadow: 2px 2px 12px #f8f8f879;
+    border-radius: 10px;
+  }
+
+  .products-banner1>img{
+    box-shadow: 2px 2px 12px #e9e9e979;
+    height: 100%;
+  }
+
+
 
   .products-banner2 {
     display: none;

@@ -1,4 +1,245 @@
-.contact-container{
-    height: 1000px;
-    margin-top: 2rem;
+.contacto-title {
+    border-bottom: 3px solid #00bfff;
+    margin: auto;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    width: 95%;
+}
+
+
+.section-contacto {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+}
+
+/*FORMULARIO*/
+
+.form-contacto-container {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.form-contacto-container .form-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-contacto>fieldset {
+    border: 2px solid #1e1e2f;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-contacto legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1e1e2f;
+    padding: 0 0.5rem;
+    text-align: start;
+}
+
+
+
+.input-item {
+    margin-bottom: 1rem;
+}
+
+.actions-form {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-limpiar {
+    background: rgb(218, 7, 7);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .5s;
+    flex: 1;
+}
+
+.btn-enviar {
+    background: #2a2a3d;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .5s;
+    flex: 1;
+}
+
+
+
+.imagen-info>img {
+    width: 50%;
+}
+
+.error-envio {
+    margin-bottom: 1rem;
+    color: rgb(177, 2, 2);
+    font-weight: 700;
+}
+
+
+/*SECTION INFORMACIÓN*/
+
+.contacto-info {
+    flex: 1;
+}
+
+.info-sucursal-central {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.info-sucursal-central>h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.sucur-mapa {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.sucur-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.section-info-suc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.section-info-suc>div {
+    margin-bottom: 1rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid #BBB;
+    width: 100%;
+    text-align: start;
+    color: #555;
+    cursor: default;
+}
+
+.section-info-suc div:last-child {
+    margin-bottom: 0;
+}
+
+.contacto-info .info-sucursales {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sucursal-lista {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #111;
+}
+
+.sucursal {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.ubication-info-sucursal {
+    text-align: start;
+}
+
+.ubication-icon {
+    color: rgb(223, 5, 5);
+}
+
+@media (max-width: 768px) {
+    .section-contacto {
+        flex-direction: column;
+        padding: 1.2rem;
+    }
+
+    .form-contacto-container {
+        padding: 1rem;
+    }
+
+    .form-contacto>fieldset {
+        border: 2px solid #1e1e2f;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-sucursal-central {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        background-color: #fff;
+        padding: 1.2rem 1rem;
+        border-radius: 10px;
+        align-items: flex-start;
+    }
+
+    .contacto-info .info-sucursales {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sucursal-lista {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sucursal {
+        display: flex;
+        width: 65%;
+        margin: auto;
+        align-items: center;
+        gap: .9rem;
+    }
+
 }
