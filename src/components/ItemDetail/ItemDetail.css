@@ -1,8 +1,13 @@
 .item-detail {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    padding: 3rem;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "img dpago"
+                         "info dpago"
+                         "info dpago";
+    padding: 3rem 3rem 1rem 3rem;
     background-color: #1b1b2b;
     color: #e0e0e0;
     border-radius: 16px;
@@ -14,7 +19,315 @@
     margin-top: 1rem;
 }
 
-.item-detail__image{
+.icono-cierreCard {
+    display: flex;
+    justify-content: end;
+    color: #FFF;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    padding: .2rem;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.icono-cierreCard:hover {
+    background-color: red;
+    transition: .5s;
+}
+
+#product-image {
+    grid-area: img;
+    /* background-color: red; */
+}
+
+#product-pay {
+    grid-area: dpago;
+    /* background-color: rgb(73, 66, 0); */
+}
+
+#prod-info {
+    grid-area: info;
+    /* background-color: blue; */
+}
+
+.item-detail__image {
+    padding: 1rem;
+    height: min-content;
+}
+
+.item-detail__image img {
+    width: 95%;
+    max-width: 500px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0, 255, 200, 0.2);
+    transition: transform 0.3s ease;
+    flex: 1;    
+}
+
+.item-detail__image img:hover {
+    transform: scale(1.02);
+}
+
+/******************************************************/
+
+.product-price-pay {
+    padding: 1.2rem;
+    width: 100%;
+
+    border-left: 1px solid #5900ff;
+
+    border-radius: 10px;
+}
+
+.product-price-pay h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.product-price-pay h3 {
+    font-size: 1.1rem;
+    color: #00bfff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.container-price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container-price .info-price {
+    display: flex;
+    gap: 1rem;
+}
+
+.item-detail__price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #00bfff;
+    text-shadow: 0 0 4px rgba(0, 255, 200, 0.5);
+    text-align: left;
+}
+
+.mode-pay {
+    width: 100%;
+    margin-top: 1.2rem;
+    /* background-color: #d6e4fdc4; */
+    background-image: url("/images/fondo-1.jpg");
+    background-size: cover;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+
+.mode-pay-card {
+    display: flex;
+    gap: .9rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    color: #000;
+}
+
+.mode-pay-card > h4{
+    text-align: start;
+}
+
+
+.card-pay {
+    width: 11%;
+}
+
+.card-pay>img {
+    width: 100%;
+}
+
+
+
+.info-pay {
+    padding-top: 1rem;
+    border-radius: 10px;
+    border-top: 1px solid #5900ff;
+}
+
+.info-pay .info-pay_item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.info-pay_item .icon-info-pay {
+    font-size: 1.5rem;
+}
+
+.info-pay_item>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-pay_item>div>h4 {
+    color: #00bfff;
+    text-align: start;
+}
+
+.btn-addCart {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shopp-protected {
+    margin-top: 2rem;
+    outline: 1px solid #5900ff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.shopp-protected>div {
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    color: #CCC;
+    font-size: .9rem;
+}
+
+
+/***************************************************/
+.product-info {
+    width: 100%;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.item-detail__feature {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #cccccc;
+    text-align: justify;
+}
+
+.item-detail__specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+
+.item-detail__specs li {
+    background-color: #1e1e1e;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    border-left: 4px solid #00bfff;
+    box-shadow: 2px 2px 12px #00bfff79;
+}
+
+@media (max-width: 768px) {
+    .item-detail {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "img"
+            "dpago"
+            "info";
+        padding: 1rem;
+        width: 95%;
+        justify-items: center;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+
+    .item-detail__image img {
+        width: 98%;
+        /* que ocupe todo el ancho disponible */
+        max-width: 100%;
+        /* evitar límite fijo */
+        margin-top: 2rem;
+    }
+
+    .product-price-pay {
+        padding: 1rem;
+        border-left: none;
+    }
+
+    .container-price {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: .8rem;
+        align-items: flex-start;
+        margin-top: 1.2rem;
+    }
+
+    
+
+    .mode-pay-card>h4 {
+        text-align: start;
+        /* que las tarjetas de pago se acomoden en varias filas */
+
+    }
+
+
+    .card-pay {
+        width: 50px;
+        /* tamaño fijo más chico para logos */
+    }
+
+    .product-info {
+        padding: 1rem;
+        border-top: 1px solid #5900ff;
+        border-radius: 10px;
+    }
+
+    .info-pay_item>div>p {
+        text-align: start;
+    }
+
+    .shopp-protected {
+        margin-bottom: 1rem;
+    }
+
+    .shopp-protected>div {
+        justify-content: flex-start;
+    }
+
+    .shopp-protected>div>p {
+        text-align: start;
+    }
+
+    .icono-cierreCard {
+        top: .7rem;
+        right: .5rem;
+    }
+}
+
+
+
+/* @media (max-width: 768px) {
+    .item-detail {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 1fr;
+        grid-template-areas: "img"
+                             "dpago"
+                             "info";
+
+
+    }
+} */
+
+/* .item-detail__image{
     margin: auto;
 }
 
@@ -159,6 +472,4 @@
         top: .7rem;
         right: .5rem;
     }
-}
-
-
+} */

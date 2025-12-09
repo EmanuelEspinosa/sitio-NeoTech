@@ -94,7 +94,8 @@ export const CartProvider = ({ children }) => {
         total,
         clearCart,
         getTotalItems,
-        checkOut
+        checkOut, 
+        exists
     };
 
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>

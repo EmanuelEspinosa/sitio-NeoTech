@@ -55,14 +55,14 @@ export const ItemListContainer = () => {
 
     return (
         <section id="products" className="sectionProducts">
-            <div className="sectionProducts-banner">
+            {/* <div className="sectionProducts-banner">
                 <div className="products-banner1">
                     <img src="/images/banner-productos1.png"/>
                 </div>
                 <div className="products-banner2">
                     <img src="/images/banner-productos2.png"/>
                 </div>
-            </div>
+            </div> */}
             <div className="list-container">
                 <div className="breadcrumb">
                     {category ?

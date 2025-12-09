@@ -36,9 +36,7 @@
     cursor: not-allowed;
 }
 
-.btn-add {
-    background-color: #00bfff;
-    color: #000;
+.btn {
     padding: 0.8rem 1rem;
     border-radius: 10px;
     font-weight: 700;
@@ -48,7 +46,22 @@
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.btn-add:hover {
+.btn-added {
+    background-color: #2dfd61;
+    color: #000;
+}
+
+.btn-default {
+    background-color: #00bfff;
+    color: #000;
+}
+
+.btn-default:hover {
     box-shadow: 2px 2px 12px #00bfff79;
+    transform: translateY(-2px);
+}
+
+.btn-added:hover{
+    box-shadow: 2px 2px 12px #5eff0079;
     transform: translateY(-2px);
 }
